@@ -12,23 +12,95 @@ html {
     background-image: url(../img/background/background_light.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /*   background-attachment: fixed;  */
+    background-attachment: fixed;
 }
 
+/* ----- HEADER Format -----*/
+
 header {
-    margin-top: 20px;
+    margin: 50px;
+    
 }
 
 #title {
     width: 100%;
-    padding: 5px;
+    padding: 0;
     border: solid 5px #d84315;
     border-radius: 10px;
     text-align: center;
-    
+    box-shadow: 10px 10px #ff7543;
 }
 
 #title a {
     text-decoration: none;
     color: #d84315;
+}
+
+/* ----- Navigation ------*/
+
+
+.navigation {
+    display: flex;
+    height: 100%;
+    margin: 0; 
+    justify-content: space-evenly;   
+}
+
+.nav-item {
+    margin: 0;
+}
+
+
+/* ---- GAME SECTION ----- */
+
+.game-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+
+}
+
+/* ---------- Comparisation section ---------- */
+
+.comp-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    margin: 30px;
+    border: solid 5px #d84315;
+    border-radius: 10px;
+    box-shadow: 20px 20px #ff7543;
+}
+
+.comp-image {
+    margin: 30px;
+    border: solid 5px #d84315;
+    border-radius: 50%;
+    width: 75%;
+
+}
+
+/* ---------- Middle Info Panel ---------- */
+
+.mid-info-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    border: solid 5px #d84315;
+    border-radius: 10px;
+    box-shadow: 20px 20px #ff7543;
+}
+
+.score-panel {
+    margin: 30px;
+    border: solid 5px #d84315;
+    border-radius: 10px;
+    
+}
+
+.info-panel {
+    margin: 30px;
+    border: solid 5px #d84315;
+    border-radius: 10px;
 }
