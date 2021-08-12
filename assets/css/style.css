@@ -9,31 +9,77 @@ html {
     height: 100%;
     width: 100%;
     font-family: 'Fredoka One', cursive;
-    background-image: url(../img/background/background_light.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #424242;
 }
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+i {
+    color:#f57f17;
+    font-size: 3rem;
+}
+
+/* ----- LANDING PAGE Format -----*/
+
+.lp-text {
+    text-align: center;
+}
+
+.lp-text h2 {
+    color:#ffffff;
+    letter-spacing: 0.2rem;
+    line-height: 2rem; 
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.lp-text p {
+    margin-top: 5rem;    
+    font-size: 2rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+.lp-text a {
+    text-decoration: none;
+    color: #f57f17;
+    padding: 20px;
+    border: solid 3px #f57f17;
+    border-radius: 10px;
+    box-shadow: 5px 5px #ffb04c;
+}
+
 
 /* ----- HEADER Format -----*/
 
 header {
-    margin: 50px;
-    
+    margin: 2rem;
+}
+
+.row {
+    margin: 0;
+    flex-wrap: nowrap;
 }
 
 #title {
-    width: 100%;
-    padding: 0;
-    border: solid 5px #d84315;
-    border-radius: 10px;
+    margin: 0;    
     text-align: center;
-    box-shadow: 10px 10px #ff7543;
+    
+}
+
+#title h1 {
+    margin: 0;
+    padding: 10px;
+    border: solid 3px #f57f17;
+    border-radius: 10px;
+    box-shadow: 5px 5px #ffb04c;
 }
 
 #title a {
     text-decoration: none;
-    color: #d84315;
+    color: #f57f17;
+    font-size: 2rem;
 }
 
 /* ----- Navigation ------*/
@@ -41,13 +87,20 @@ header {
 
 .navigation {
     display: flex;
-    height: 100%;
     margin: 0; 
     justify-content: space-evenly;   
 }
 
 .nav-item {
     margin: 0;
+    letter-spacing: 0.2rem;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
 }
 
 
@@ -55,52 +108,77 @@ header {
 
 .game-section {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin: 50px;
-
+    margin: 2rem;
+    border: solid 3px #ffffff;
+    border-radius: 10px;
+    box-shadow: 5px 5px #6d6d6d;
+    background-color: #e0e0e0 ;
+    text-align: center;
 }
 
 /* ---------- Comparisation section ---------- */
 
 .comp-item {
     display: flex;
-    flex-direction: column;
-    align-items: center;    
-    margin: 30px;
-    border: solid 5px #d84315;
-    border-radius: 10px;
-    box-shadow: 20px 20px #ff7543;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;   
+    
 }
 
-.comp-image {
-    margin: 30px;
-    border: solid 5px #d84315;
-    border-radius: 50%;
-    width: 75%;
+.comp-item h1 {
+    padding: 10px;
+    color:#424242;
+    font-size: 2em;
+}
 
+/* .comp-image {
+    margin: 0;
+    border: solid 3px #ffffff;
+    border-radius: 50%;
+    width: 35%;
+}*/
+
+img {
+    margin: 0;
+    border: solid 3px #ffffff;
+    border-radius: 50%;
+    width: 35%;
 }
 
 /* ---------- Middle Info Panel ---------- */
 
-.mid-info-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px;
-    border: solid 5px #d84315;
-    border-radius: 10px;
-    box-shadow: 20px 20px #ff7543;
-}
-
 .score-panel {
-    margin: 30px;
-    border: solid 5px #d84315;
+    margin: 0;
+    border: solid 3px #bc5100;
     border-radius: 10px;
     
 }
 
 .info-panel {
     margin: 30px;
-    border: solid 5px #d84315;
+    border: solid 3px #ffffff;
     border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+/* ----- HOVER -----*/
+
+img:hover {
+    border: solid 5px red;
+}
+
+.lp-text a:hover {
+    background-color: #ffb04c;
+    color: #424242;
+    border: solid 3px #424242;
+    box-shadow: 5px 5px #bc5100;
 }
