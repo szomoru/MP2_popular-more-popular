@@ -138,3 +138,19 @@ var dataBaseArray =
    placeOfBirth: 'Netherlands, Leeuwarden',
    info: 'https://en.wikipedia.org/wiki/Mata_Hari',
    pictureLocation: './assets/img/people/Mata_Hari_640x640_tiny.jpg '}]
+
+   
+   let i
+   let j
+
+   let compOneNumber=Math.floor(Math.random()*20);
+   let compTwoNumber=Math.floor(Math.random()*20);
+
+   if (compOneNumber == compTwoNumber) {
+      let compTwoNumber=Math.floor(Math.random()*20);
+   }
+
+
+
+   let newGameArray = []
+
