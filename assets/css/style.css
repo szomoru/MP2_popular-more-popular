@@ -325,26 +325,25 @@ iframe element.style {
     box-shadow: 5px 5px #ffb04c;
     font-family: 'Fredoka One', cursive;
     color: #f57f17;
+    font-size: 1.2rem;
 }
 
 .navbar-toggler {
-    border-radius: 10px;
-    border: 1.5px solid #f57f17;
+    border-radius: 5px;
+    background-color: #ffffff;
 }
 
 .navbar-nav .nav-link {
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .nav-item {
     margin: 0 1rem 0 0;
 }
 
-.nav-link.active {
-    background-color: #ffb04c;
-    border-radius: 10px;
-    opacity: 0.8;
-    color: transparent;
+.active {
+     color: #f57f17 !important;
 }
 
 /* ----- HOVER -----*/
@@ -357,11 +356,8 @@ iframe element.style {
     box-shadow: 5px 5px #bc5100;
 }
 
-.nav-item:hover {
-    background-color: #ffb04c;
-    border-radius: 10px;
-    opacity: 0.8;
-    color: transparent;
+.navbar-nav:hover {
+    color: #f57f17;
 }
 
 .btn-img-container .btn-up:hover {
@@ -390,6 +386,19 @@ iframe element.style {
         flex-direction: column;
     };
 }
+
+@media screen and (max-width: 376px) {
+
+    .navbar p {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+}
+
 
 /*@media screen and (min-width: 641px) {
     #navbar-hamburger {
