@@ -151,11 +151,7 @@ header {
     max-height: max-content;
 }
 
-.comp-title h1 {
-    padding: 10px;
-    color:#f57f17;
-    font-size: 4em;
-}
+
 
 /* ---------- Comparisation section ---------- */
 
@@ -190,8 +186,38 @@ header {
 }
 
 .comp-title {
-    
     text-align: center;
+}
+
+.comp-title h3 {
+    color:#ab000d;
+    font-size: 2em;
+    padding: 1.5rem;
+}
+
+.btn-start {
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #e0e0e0;
+    background-color: #ab000d;
+
+}
+
+.btn-start:focus {
+    outline: none;
+}
+
+.btn--big {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #ab000d;
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem 0;
+    transition: all 0.5s;
 }
 
 /* .comp-image {
