@@ -16,13 +16,11 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
-
 header,
 section,
 footer {
-    margin: 20px;
+    margin: 1.2rem;
 }
-
 
 header {
     display: flex;
@@ -113,7 +111,6 @@ header {
 }
 
 
-
 /* ----- HEADER Format -----*/
 
 /*header {
@@ -124,8 +121,6 @@ header {
     margin: 0;
     flex-wrap: nowrap;
 }
-
-
 
 #lp-title .nav-title {
     text-decoration: none;
@@ -139,52 +134,6 @@ header {
     box-shadow: 5px 5px #ffb04c;
 }
 
-/* ----- Navigation ------*/
-
-.navigation-menu {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    margin: 0;
-}
-
-.navigation-list {
-    display: flex;
-    margin: 0; 
-    justify-content: space-evenly;   
-}
-
-.nav-menu-item a {
-    text-decoration: none;
-    margin: 0;
-    letter-spacing: 0.2rem;
-    color: #ffffff;
-    font-size: 1rem;
-}
-
-.nav-menu-item {
-    padding: 10px;
-    border: solid 2px #ffffff;
-    border-radius: 10px;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.list-inline-item {
-    margin-right: 2rem;
-    margin-left: 2rem;
-}
-
-.list-inline-item:not(:last-child) {
-    margin-right: 2rem;
-}
 
 
 /* ---- GAME SECTION ----- */
@@ -244,8 +193,6 @@ header {
     
     text-align: center;
 }
-
-
 
 /* .comp-image {
     margin: 0;
@@ -340,8 +287,6 @@ img {
 }
 
 
-
-
 /* ----------- Trend Panel ----------- */
 
 .trend-section {
@@ -365,9 +310,42 @@ iframe element.style {
 /* ---------- NAVBAR ---------- */
 
 .navbar {
-    padding: 0;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px #6d6d6d;
+    background-color: #e0e0e0;
+    width: 100%;
 }
 
+.navbar p {
+    padding: 0.8rem;
+    margin: 0 1rem 0 0;
+    border: solid 3px #f57f17;
+    border-radius: 10px;
+    box-shadow: 5px 5px #ffb04c;
+    font-family: 'Fredoka One', cursive;
+    color: #f57f17;
+}
+
+.navbar-toggler {
+    border-radius: 10px;
+    border: 1.5px solid #f57f17;
+}
+
+.navbar-nav .nav-link {
+    text-align: center;
+}
+
+.nav-item {
+    margin: 0 1rem 0 0;
+}
+
+.nav-link.active {
+    background-color: #ffb04c;
+    border-radius: 10px;
+    opacity: 0.8;
+    color: transparent;
+}
 
 /* ----- HOVER -----*/
 
@@ -379,13 +357,11 @@ iframe element.style {
     box-shadow: 5px 5px #bc5100;
 }
 
-.nav-menu-item:hover {
+.nav-item:hover {
     background-color: #ffb04c;
-    color: #424242;
-}
-
-.nav-menu-item a:hover {
-    color: #424242;
+    border-radius: 10px;
+    opacity: 0.8;
+    color: transparent;
 }
 
 .btn-img-container .btn-up:hover {
