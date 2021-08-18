@@ -176,18 +176,57 @@ const dataBaseArray =
    }
 
    
-   function newGame(){
-      let newGameArray = [];
-      /*for (let i=0; i<20; i++) {
-         dataBaseArray[i]["searchVolume"] = searchVolumeArray[i];
-      }*/
-      addSearchVolume();
+  
+   function createRandNumArray() {
+      var randNumArray = [];
       for (let i=0; i<10; i++) {
-         let randomNumber = Math.floor(Math.random()*10);
-         console.log(randomNumber);
-         newGameArray.push(dataBaseArray[randomNumber]); 
-      }
-      console.log(newGameArray);
+         let randomNumber1 = Math.floor(Math.random()*20);
+         let randomNumber2 = Math.floor(Math.random()*20);
+         if ( randomNumber1 == randomNumber2) {
+         do {
+            randomNumber2 = Math.floor(Math.random()*20);
+         }
+         while (randomNumber1 == randomNumber2);
+         }
+         randNumArray.push([randomNumber1,randomNumber2]);
+         }
+         console.log(randNumArray);
+      return randNumArray;
    }
+   
+
+   function newGame(){
+      
+      addSearchVolume();    /* --- calling addSearchVolume function ---*/
+     
+      var randNumArray = [];
+      for (let i=0; i<5; i++) {
+         let randomNumber1 = Math.floor(Math.random()*20);
+         let randomNumber2 = Math.floor(Math.random()*20);
+         if ( randomNumber1 == randomNumber2) {
+         do {
+            randomNumber2 = Math.floor(Math.random()*20);
+         }
+         while (randomNumber1 == randomNumber2);
+         }
+         randNumArray.push([randomNumber1,randomNumber2]);
+         }
+
+         flatRandNumArray = randNumArray.flat();
+         console.log(flatRandNumArray);
+
+      
+
+      let newGameArray = [];
+
+      for (let i=0; i<flatRandNumArray.length; i++) {
+         newGameArray.push(dataBaseArray[flatRandNumArray[i]]);
+      }
+     
+   
+    console.log(newGameArray);
+      
+   }
+
 
    
