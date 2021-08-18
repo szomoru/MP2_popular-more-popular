@@ -28,7 +28,7 @@ const dataBaseArray =
    dateOfBirth: '21st of July 1899',
    placeOfBirth: 'U.S. Oak Park Illinois',
    info: 'https://en.wikipedia.org/wiki/Ernest_Hemingway',
-   pictureLocation: './assets/img/people/Ernest_Hemingway_640x640_tiny.jpg ',
+   pictureLocation: './assets/img/people/Ernest _Hemingway_640x640_tiny.jpg ',
    searchVolume: 0 },
 
   {name: 'Muhammad Ali',
@@ -47,12 +47,12 @@ const dataBaseArray =
    pictureLocation: './assets/img/people/Stephen_Hawking_640x640_tiny.jpg ',
    searchVolume: 0 },
 
-  {name: 'Freddy Mercury',
+  {name: 'Freddie Mercury',
    profession: 'Musician',
    dateOfBirth: '5th of September 1946',
    placeOfBirth: 'Sultanate of Zanzibar, Stone Town',
    info: 'https://en.wikipedia.org/wiki/Freddie_Mercury',
-   pictureLocation: './assets/img/people/Freddy_Mercury_640x640_tiny.jpg ',
+   pictureLocation: './assets/img/people/Freddie_Mercury_640x640_tiny.jpg ',
    searchVolume: 0 },
 
   {name: 'Jack Lemmon',
@@ -206,21 +206,26 @@ const dataBaseArray =
 
    function updateGameArea(){
       let compSectionLeft = document.getElementById("comp-section-left");
-      console.log(newGameArray);
-      compSectionLeft.innerHTML= `
-         <img class="comp-image" src="${newGameArray[1].pictureLocation}" alt="${newGameArray[1].name}">
-         <div class="info-panel">
-            <p><strong>Name:</strong> ${newGameArray[1].name}</p>
-            <br>
-            <p><strong>Profession:</strong> ${newGameArray[1].profession}</p>
-            <br>
-            <p><strong>Date of birth:</strong> ${newGameArray[1].dateOfBirth}</p>
-            <br>
-            <p><strong>Place of birth:</strong> ${newGameArray[1].placeOfBirth}</p>
-            <br>
-            <p><strong>More info:</strong> <a href="${newGameArray[1].info}">Wikipedia</a></p>
-            <br>
-      </div>`;
+         compSectionLeft.innerHTML= `
+            <img class="comp-image" src="${newGameArray[0].pictureLocation}" alt="${newGameArray[0].name}">
+            <div class="info-panel">
+               <p><strong>Name:</strong> ${newGameArray[0].name}</p>
+               <p><strong>Profession:</strong> ${newGameArray[0].profession}</p>
+               <p><strong>Date of birth:</strong> ${newGameArray[0].dateOfBirth}</p>
+               <p><strong>Place of birth:</strong> ${newGameArray[0].placeOfBirth}</p>
+               <p><strong>More info:</strong> <a href="${newGameArray[0].info}">Wikipedia</a></p>
+         </div>`;
+
+         let compSectionRight = document.getElementById("comp-section-right");
+         compSectionRight.innerHTML= `
+            <img class="comp-image" src="${newGameArray[1].pictureLocation}" alt="${newGameArray[1].name}">
+            <div class="info-panel">
+               <p><strong>Name:</strong> ${newGameArray[1].name}</p>
+               <p><strong>Profession:</strong> ${newGameArray[1].profession}</p>
+               <p><strong>Date of birth:</strong> ${newGameArray[1].dateOfBirth}</p>
+               <p><strong>Place of birth:</strong> ${newGameArray[1].placeOfBirth}</p>
+               <p><strong>More info:</strong> <a href="${newGameArray[1].info}">Wikipedia</a></p>
+         </div>`;
    }
 
 
