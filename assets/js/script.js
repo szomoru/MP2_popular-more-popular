@@ -160,7 +160,7 @@ const dataBaseArray =
    searchVolume: 0 }]
 
    var searchVolumeArray = [25, 56, 89, 24, 65, 687, 357, 367, 687, 123, 74354, 45, 68, 72, 732, 7423, 682, 98, 426, 3247]
-
+   var newGameArray = [];
 
    document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("startBtn").addEventListener("click", newGame);
@@ -176,57 +176,51 @@ const dataBaseArray =
    }
 
    
-  
-   function createRandNumArray() {
-      var randNumArray = [];
-      for (let i=0; i<10; i++) {
-         let randomNumber1 = Math.floor(Math.random()*20);
-         let randomNumber2 = Math.floor(Math.random()*20);
-         if ( randomNumber1 == randomNumber2) {
-         do {
-            randomNumber2 = Math.floor(Math.random()*20);
-         }
-         while (randomNumber1 == randomNumber2);
-         }
-         randNumArray.push([randomNumber1,randomNumber2]);
-         }
-         console.log(randNumArray);
-      return randNumArray;
-   }
-   
 
    function newGame(){
       
       addSearchVolume();    /* --- calling addSearchVolume function ---*/
      
-      var randNumArray = [];
-      for (let i=0; i<5; i++) {
-         let randomNumber1 = Math.floor(Math.random()*20);
-         let randomNumber2 = Math.floor(Math.random()*20);
-         if ( randomNumber1 == randomNumber2) {
-         do {
-            randomNumber2 = Math.floor(Math.random()*20);
-         }
-         while (randomNumber1 == randomNumber2);
-         }
+      var randNumArray = []; /* --- Create a random number array with 5 pairs ---*/
+      for (let i=0; i<5; i++) {                                      
+         let randomNumber1 = Math.floor(Math.random()*20);  /* --- Create random number 1 from 0 to 20---*/
+         let randomNumber2 = Math.floor(Math.random()*20);  /* --- Create random number 2 from 0 to 20 ---*/
+            if ( randomNumber1 == randomNumber2) {              /* --- if statement with the do while cycle make sure that 1 pair wont contain the same numbers --- */
+               do {                                      
+                  randomNumber2 = Math.floor(Math.random()*20);
+               }
+               while (randomNumber1 == randomNumber2);
+            }
          randNumArray.push([randomNumber1,randomNumber2]);
-         }
+      }
 
-         flatRandNumArray = randNumArray.flat();
-         console.log(flatRandNumArray);
-
+      flatRandNumArray = randNumArray.flat();      /* --- I need 10 random number where i am sure that there are no repeated numbers after eachoder directly (with 2-3 numbers gap it is not a problem) --- */ 
+      console.log(flatRandNumArray);               /* --- 1 game has 10 guess, so by flattening the 5 pairs I get an array which contains 10 random number and there is no repeated numbers directly after eachother ---*/
+                                                      
       
-
-      let newGameArray = [];
-
-      for (let i=0; i<flatRandNumArray.length; i++) {
+      for (let i=0; i<flatRandNumArray.length; i++) {                /* --- the flattened array is used to definet the new game array. the flattened array values are the indexes of the database array elements. the new game array contains the database elements with all object information. ---*/
          newGameArray.push(dataBaseArray[flatRandNumArray[i]]);
       }
-     
-   
-    console.log(newGameArray);
-      
+      updateGameArea();
+   }
+
+   function updateGameArea(){
+      let compSectionLeft = document.getElementById("comp-section-left");
+      console.log(newGameArray);
+      compSectionLeft.innerHTML= `
+         <img class="comp-image" src="${newGameArray[1].pictureLocation}" alt="${newGameArray[1].name}">
+         <div class="info-panel">
+            <p><strong>Name:</strong> ${newGameArray[1].name}</p>
+            <br>
+            <p><strong>Profession:</strong> ${newGameArray[1].profession}</p>
+            <br>
+            <p><strong>Date of birth:</strong> ${newGameArray[1].dateOfBirth}</p>
+            <br>
+            <p><strong>Place of birth:</strong> ${newGameArray[1].placeOfBirth}</p>
+            <br>
+            <p><strong>More info:</strong> <a href="${newGameArray[1].info}">Wikipedia</a></p>
+            <br>
+      </div>`;
    }
 
 
-   
