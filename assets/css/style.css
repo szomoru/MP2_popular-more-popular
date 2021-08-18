@@ -365,7 +365,7 @@ iframe element.style {
 }
 
 .navbar-nav .nav-link {
-    text-align: center;
+    text-align: left;
     font-size: 1.5rem;
 }
 
@@ -420,11 +420,6 @@ iframe element.style {
     .navbar p {
         display: none;
     }
-
-    .navbar {
-        justify-content: center;
-    }
-
 }
 
 
