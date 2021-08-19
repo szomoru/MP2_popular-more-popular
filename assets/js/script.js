@@ -160,7 +160,10 @@ const dataBaseArray =
    searchVolume: 0 }]
 
    var searchVolumeArray = [25, 56, 89, 24, 65, 687, 357, 367, 687, 123, 74354, 45, 68, 72, 732, 7423, 682, 98, 426, 3247]
+
    var newGameArray = [];
+
+   var nrOfQuestion 
 
    document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("startBtn").addEventListener("click", newGame);
@@ -204,32 +207,28 @@ const dataBaseArray =
       updateGameArea();
    }
 
+function createQuestionCard(user){
+   return `
+   <img class="comp-image" src="${user.pictureLocation}" alt="${user.name}">
+   <div class="info-panel">
+      <p><strong>Name:</strong> ${user.name}</p>
+      <p><strong>Profession:</strong> ${user.profession}</p>
+      <p><strong>Date of birth:</strong> ${user.dateOfBirth}</p>
+      <p><strong>Place of birth:</strong> ${user.placeOfBirth}</p>
+      <p><strong>More info:</strong> <a href="${user.info}">Wikipedia</a></p>
+</div>`
+}
+
    function updateGameArea(){
       let nrOfQuestion = 1;
       let compSectionLeft = document.getElementById("comp-section-left");
-         compSectionLeft.innerHTML= `
-            <img class="comp-image" src="${newGameArray[nrOfQuestion-1].pictureLocation}" alt="${newGameArray[nrOfQuestion-1].name}">
-            <div class="info-panel">
-               <p><strong>Name:</strong> ${newGameArray[nrOfQuestion-1].name}</p>
-               <p><strong>Profession:</strong> ${newGameArray[nrOfQuestion-1].profession}</p>
-               <p><strong>Date of birth:</strong> ${newGameArray[nrOfQuestion-1].dateOfBirth}</p>
-               <p><strong>Place of birth:</strong> ${newGameArray[nrOfQuestion-1].placeOfBirth}</p>
-               <p><strong>More info:</strong> <a href="${newGameArray[nrOfQuestion-1].info}">Wikipedia</a></p>
-         </div>`;
+         compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1]);
 
          let compSectionRight = document.getElementById("comp-section-right");
-         compSectionRight.innerHTML= `
-            <img class="comp-image" src="${newGameArray[nrOfQuestion].pictureLocation}" alt="${newGameArray[nrOfQuestion].name}">
-            <div class="info-panel">
-               <p><strong>Name:</strong> ${newGameArray[nrOfQuestion].name}</p>
-               <p><strong>Profession:</strong> ${newGameArray[nrOfQuestion].profession}</p>
-               <p><strong>Date of birth:</strong> ${newGameArray[nrOfQuestion].dateOfBirth}</p>
-               <p><strong>Place of birth:</strong> ${newGameArray[nrOfQuestion].placeOfBirth}</p>
-               <p><strong>More info:</strong> <a href="${newGameArray[nrOfQuestion].info}">Wikipedia</a></p>
-         </div>`;
+
+         compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion]);
 
          calculateCorrectAnswer()
-         return[nrOfQuestion];
          
    }
 
@@ -254,9 +253,10 @@ const dataBaseArray =
       
    }
 
-   function checkAnswer() {
+   function checkAnswer(e) {
+      console.log(e);
 
-      document.getElementById("comp-section-left").addEventListener("click", function() {
+      /*document.getElementById("comp-section-left").addEventListener("click", function() {
          let g= this.getAttribute("data-type")
          console.log(g);
       })
@@ -264,7 +264,7 @@ const dataBaseArray =
       document.getElementById("comp-section-right").addEventListener("click", function() {
          let z= this.getAttribute("data-type")
          console.log(z);
-      })
+      })*/
 
    }
 
