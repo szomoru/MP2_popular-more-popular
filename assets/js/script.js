@@ -255,7 +255,21 @@ const dataBaseArray =
    }
 
    function checkAnswer() {
-      document.getElementsByClassName("clickCheck").addEventListener("click", function() {
+
+      document.getElementById("comp-section-left").addEventListener("click", function() {
+         let g= this.getAttribute("data-type")
+         console.log(g);
+      })
+
+      document.getElementById("comp-section-right").addEventListener("click", function() {
+         let z= this.getAttribute("data-type")
+         console.log(z);
+      })
+
+   }
+
+
+      /*document.getElementsByClassName("clickCheck").addEventListener("click", console.log("This works"));/*function() {
       if (this.getAttribute("data-type") === "compOneVolume" ) {
          console.log("CONGRTATULATION!");
          incrementScore();}
@@ -264,9 +278,9 @@ const dataBaseArray =
             incrementWrongAnswer();
          }
        console.log("You reached me");
-      })
+      })*/
          
-   }
+   
 
    function incrementScore() {
 
