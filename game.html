@@ -73,34 +73,34 @@
 
 
     <section>
-        <div class="game-section">
+      <div class="game-section">
 
-            <div class="comp-title">   
-                <h3>Who was More Popular in the last 30 days?</h3>
-                <button id="startBtn" data-type="newGame" class="btn-start btn--big grow">Start Game</button>
+        <div class="comp-title">   
+            <h3>Who was More Popular in the last 30 days?</h3>
+            <button id="startBtn" data-type="newGame" class="btn-start btn--big grow">Start Game</button>
+        </div>
+
+        <div class="comp-section">
+            <div data-type="compOneVolume" id="comp-section-left" onclick="checkAnswer()" class="comp-item-1 clickCheck">
+              <img class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
+              <div class="info-panel">
+                <p><strong>Information</strong></p>
+              </div>
             </div>
 
-            <div class="comp-section">
-                <div id="comp-section-left" class="comp-item-1 grow">
-                  <img class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
-                  <div class="info-panel">
-                    <p><strong>Information</strong></p> 
-                  </div>
-                </div>
-
-                <div id="comp-section-right" class="comp-item-2 grow">
-                  <div class="btn-img-container">
-                    <img class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
-                    <div class="btn-container grow">
-                      <button type="submit" class="btn btn-secondary btn-format btn-up"><i class="fas fa-caret-up"></i></button>
-                      <button type="submit" class="btn btn-secondary btn-format btn-down"><i class="fas fa-caret-down"></i></button>
-                    </div>                        
-                  </div>
-                  <div class="info-panel">
-                    <p><strong>Information</strong></p>
-                  </div>
-                </div>
+            <div data-type="compTwoVolume" id="comp-section-right" onclick="checkAnswer()" class="comp-item-2 clickCheck">
+              <div class="btn-img-container">
+                <img class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
+                <div class="btn-container grow">
+                  <button type="submit" class="btn btn-secondary btn-format btn-up"><i class="fas fa-caret-up"></i></button>
+                  <button type="submit" class="btn btn-secondary btn-format btn-down"><i class="fas fa-caret-down"></i></button>
+                </div>                        
+              </div>
+              <div class="info-panel">
+                <p><strong>Information</strong></p>
+              </div>
             </div>
+        </div>
 
             <div class="score-section">
               <div class="score-panel">

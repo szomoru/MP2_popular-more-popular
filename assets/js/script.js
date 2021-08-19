@@ -205,27 +205,80 @@ const dataBaseArray =
    }
 
    function updateGameArea(){
+      let nrOfQuestion = 1;
       let compSectionLeft = document.getElementById("comp-section-left");
          compSectionLeft.innerHTML= `
-            <img class="comp-image" src="${newGameArray[0].pictureLocation}" alt="${newGameArray[0].name}">
+            <img class="comp-image" src="${newGameArray[nrOfQuestion-1].pictureLocation}" alt="${newGameArray[nrOfQuestion-1].name}">
             <div class="info-panel">
-               <p><strong>Name:</strong> ${newGameArray[0].name}</p>
-               <p><strong>Profession:</strong> ${newGameArray[0].profession}</p>
-               <p><strong>Date of birth:</strong> ${newGameArray[0].dateOfBirth}</p>
-               <p><strong>Place of birth:</strong> ${newGameArray[0].placeOfBirth}</p>
-               <p><strong>More info:</strong> <a href="${newGameArray[0].info}">Wikipedia</a></p>
+               <p><strong>Name:</strong> ${newGameArray[nrOfQuestion-1].name}</p>
+               <p><strong>Profession:</strong> ${newGameArray[nrOfQuestion-1].profession}</p>
+               <p><strong>Date of birth:</strong> ${newGameArray[nrOfQuestion-1].dateOfBirth}</p>
+               <p><strong>Place of birth:</strong> ${newGameArray[nrOfQuestion-1].placeOfBirth}</p>
+               <p><strong>More info:</strong> <a href="${newGameArray[nrOfQuestion-1].info}">Wikipedia</a></p>
          </div>`;
 
          let compSectionRight = document.getElementById("comp-section-right");
          compSectionRight.innerHTML= `
-            <img class="comp-image" src="${newGameArray[1].pictureLocation}" alt="${newGameArray[1].name}">
+            <img class="comp-image" src="${newGameArray[nrOfQuestion].pictureLocation}" alt="${newGameArray[nrOfQuestion].name}">
             <div class="info-panel">
-               <p><strong>Name:</strong> ${newGameArray[1].name}</p>
-               <p><strong>Profession:</strong> ${newGameArray[1].profession}</p>
-               <p><strong>Date of birth:</strong> ${newGameArray[1].dateOfBirth}</p>
-               <p><strong>Place of birth:</strong> ${newGameArray[1].placeOfBirth}</p>
-               <p><strong>More info:</strong> <a href="${newGameArray[1].info}">Wikipedia</a></p>
+               <p><strong>Name:</strong> ${newGameArray[nrOfQuestion].name}</p>
+               <p><strong>Profession:</strong> ${newGameArray[nrOfQuestion].profession}</p>
+               <p><strong>Date of birth:</strong> ${newGameArray[nrOfQuestion].dateOfBirth}</p>
+               <p><strong>Place of birth:</strong> ${newGameArray[nrOfQuestion].placeOfBirth}</p>
+               <p><strong>More info:</strong> <a href="${newGameArray[nrOfQuestion].info}">Wikipedia</a></p>
          </div>`;
+
+         calculateCorrectAnswer()
+         return[nrOfQuestion];
+         
    }
 
+   function updateQuestionNr(nrOfQuestion) {
+      /*let questionNumber = parseInt(document.getElementById("questionNumber").innerText);*/
+      document.getElementById("questionNumber").innerText = nrOfQuestion;
 
+      
+   }
+
+   function calculateCorrectAnswer() {
+      let compOneVolume = newGameArray[0].searchVolume;
+   
+      let compTwoVolume = newGameArray[1].searchVolume;
+      
+      if (compOneVolume>compTwoVolume) {
+         return["compOneVolume"];
+         }
+         else {
+            return["compTwoVolume"];
+         }
+      
+   }
+
+   function checkAnswer() {
+      document.getElementsByClassName("clickCheck").addEventListener("click", function() {
+      if (this.getAttribute("data-type") === "compOneVolume" ) {
+         console.log("CONGRTATULATION!");
+         incrementScore();}
+         else { 
+            console.log("Too BAd");
+            incrementWrongAnswer();
+         }
+       console.log("You reached me");
+      })
+         
+   }
+
+   function incrementScore() {
+
+      let oldScoreCorrect = parseInt(document.getElementById("correctAnswer").innerText);
+      console.log(oldScoreCorrect);
+      document.getElementById("correctAnswer").innerText = ++oldScoreCorrect;
+   }
+    
+   function incrementWrongAnswer() {
+    
+     let oldScoreWrong = parseInt(document.getElementById("wrongAnswer").innerText);
+     console.log(oldScoreWrong);
+     document.getElementById("wrongAnswer").innerText = ++oldScoreWrong;
+    
+   }
