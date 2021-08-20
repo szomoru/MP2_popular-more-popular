@@ -163,7 +163,9 @@ const dataBaseArray =
 
    var newGameArray = [];
 
-   var nrOfQuestion 
+   var randNumArray = [];
+
+   var nrOfQuestion = 1;
 
    document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("startBtn").addEventListener("click", newGame);
@@ -183,7 +185,6 @@ const dataBaseArray =
    function newGame(){
       
       addSearchVolume();    /* --- calling addSearchVolume function ---*/
-      nrOfQuestion = 1;
      
       var randNumArray = []; /* --- Create a random number array with 5 pairs ---*/
       for (let i=0; i<5; i++) {                                      
@@ -209,6 +210,7 @@ const dataBaseArray =
       updateQuestionNr();
    }
 
+
 function createQuestionCard(user){
    return `
    <img class="comp-image" src="${user.pictureLocation}" alt="${user.name}">
@@ -222,6 +224,7 @@ function createQuestionCard(user){
 }
 
    function updateGameArea(){
+      updateQuestionNr();
       let compSectionLeft = document.getElementById("comp-section-left");
          compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1]);
 
@@ -264,6 +267,7 @@ function createQuestionCard(user){
       
 
    function checkAnswer(e) {
+      
       console.log(e);
 
       /*document.getElementById("comp-section-left").addEventListener("click", function() {
@@ -275,7 +279,9 @@ function createQuestionCard(user){
          let z= this.getAttribute("data-type")
          console.log(z);
       })*/
-      ++nrOfQuestion;
+      nrOfQuestion = ++nrOfQuestion;
+      console.log(nrOfQuestion);
+      updateGameArea();
    }
 
 
