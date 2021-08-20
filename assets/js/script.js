@@ -183,6 +183,7 @@ const dataBaseArray =
    function newGame(){
       
       addSearchVolume();    /* --- calling addSearchVolume function ---*/
+      nrOfQuestion = 1;
      
       var randNumArray = []; /* --- Create a random number array with 5 pairs ---*/
       for (let i=0; i<5; i++) {                                      
@@ -205,6 +206,7 @@ const dataBaseArray =
          newGameArray.push(dataBaseArray[flatRandNumArray[i]]);
       }
       updateGameArea();
+      updateQuestionNr();
    }
 
 function createQuestionCard(user){
@@ -220,7 +222,6 @@ function createQuestionCard(user){
 }
 
    function updateGameArea(){
-      let nrOfQuestion = 1;
       let compSectionLeft = document.getElementById("comp-section-left");
          compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1]);
 
@@ -232,7 +233,7 @@ function createQuestionCard(user){
          
    }
 
-   function updateQuestionNr(nrOfQuestion) {
+   function updateQuestionNr() {
       /*let questionNumber = parseInt(document.getElementById("questionNumber").innerText);*/
       document.getElementById("questionNumber").innerText = nrOfQuestion;
 
@@ -240,18 +241,27 @@ function createQuestionCard(user){
    }
 
    function calculateCorrectAnswer() {
-      let compOneVolume = newGameArray[0].searchVolume;
+      if (newGameArray[nrOfQuestion-1].searchVolume > newGameArray[nrOfQuestion].searchVolume) {
+         console.log("The winner is Comp1");
+         console.log(newGameArray[nrOfQuestion-1].searchVolume);
+         console.log(newGameArray[nrOfQuestion].searchVolume)}
+         else {
+            console.log("The winner is Comp2");
+            console.log(newGameArray[nrOfQuestion-1].searchVolume);
+            console.log(newGameArray[nrOfQuestion].searchVolume)}
+         
+      } 
+      /*let compOneVolume = newGameArray[0].searchVolume;
    
       let compTwoVolume = newGameArray[1].searchVolume;
       
       if (compOneVolume>compTwoVolume) {
-         return["compOneVolume"];
+         return compOneVolume;
          }
          else {
-            return["compTwoVolume"];
-         }
+            return compTwoVolume;
+         }*/
       
-   }
 
    function checkAnswer(e) {
       console.log(e);
@@ -265,7 +275,7 @@ function createQuestionCard(user){
          let z= this.getAttribute("data-type")
          console.log(z);
       })*/
-
+      ++nrOfQuestion;
    }
 
 
