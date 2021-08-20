@@ -185,29 +185,54 @@ const dataBaseArray =
    function newGame(){
       
       addSearchVolume();    /* --- calling addSearchVolume function ---*/
+      for (let i=0; i<20; i++) {
+         let randomNumber = Math.floor(Math.random()*20);
+         if (randNumArray.length < 2) {
+            randNumArray.push(randomNumber);
+         }
+         else {
+            if (randNumArray.includes(randomNumber)) {
+               randomNumber = Math.floor(Math.random()*20);
+               randNumArray.push(randomNumber);
+            }
+            else {
+               randNumArray.push(randomNumber);
+            }     
+         }
+      }
+
+      console.log(randNumArray);
      
-      var randNumArray = []; /* --- Create a random number array with 5 pairs ---*/
-      for (let i=0; i<5; i++) {                                      
+       /* --- Create a random number array with 5 pairs ---*/
+      /*for (let i=0; i<10; i++) {                                      
          let randomNumber1 = Math.floor(Math.random()*20);  /* --- Create random number 1 from 0 to 20---*/
-         let randomNumber2 = Math.floor(Math.random()*20);  /* --- Create random number 2 from 0 to 20 ---*/
-            if ( randomNumber1 == randomNumber2) {              /* --- if statement with the do while cycle make sure that 1 pair wont contain the same numbers --- */
-               do {                                      
+      /*   let randomNumber2 = Math.floor(Math.random()*20);  /* --- Create random number 2 from 0 to 20 ---*/
+      /*     if ( randomNumber1 == randomNumber2) {              /* --- if statement with the do while cycle make sure that 1 pair wont contain the same numbers --- */
+      /*         do {                                      
                   randomNumber2 = Math.floor(Math.random()*20);
                }
-               while (randomNumber1 == randomNumber2);
+               while (randomNumber1 != randomNumber2);
             }
          randNumArray.push([randomNumber1,randomNumber2]);
       }
-
-      flatRandNumArray = randNumArray.flat();      /* --- I need 10 random number where i am sure that there are no repeated numbers after eachoder directly (with 2-3 numbers gap it is not a problem) --- */ 
-      console.log(flatRandNumArray);               /* --- 1 game has 10 guess, so by flattening the 5 pairs I get an array which contains 10 random number and there is no repeated numbers directly after eachother ---*/
+      console.log(randNumArray);
+      /*flatRandNumArray = randNumArray.flat();      /* --- I need 10 random number where i am sure that there are no repeated numbers after eachoder directly (with 2-3 numbers gap it is not a problem) --- */ 
+      /*console.log(flatRandNumArray);               /* --- 1 game has 10 guess, so by flattening the 5 pairs I get an array which contains 10 random number and there is no repeated numbers directly after eachother ---*/
                                                       
       
-      for (let i=0; i<flatRandNumArray.length; i++) {                /* --- the flattened array is used to definet the new game array. the flattened array values are the indexes of the database array elements. the new game array contains the database elements with all object information. ---*/
-         newGameArray.push(dataBaseArray[flatRandNumArray[i]]);
+      for (let j=0; j<randNumArray.length; j+=2) {                /* --- the flattened array is used to definet the new game array. the flattened array values are the indexes of the database array elements. the new game array contains the database elements with all object information. ---*/
+         newGameArray.push([dataBaseArray[randNumArray[j]],dataBaseArray[randNumArray[j+1]]]);
       }
+      
+      
+      /*for (let j=0; j<randNumArray.length; j++){
+         newGameArray.push(dataBaseArray[randNumArray[j]]);
+      }*/
+
+
+      console.log(newGameArray);
       updateGameArea();
-      updateQuestionNr();
+
    }
 
 
@@ -226,11 +251,11 @@ function createQuestionCard(user){
    function updateGameArea(){
       updateQuestionNr();
       let compSectionLeft = document.getElementById("comp-section-left");
-         compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1]);
+         compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1][0]);
 
          let compSectionRight = document.getElementById("comp-section-right");
 
-         compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion]);
+         compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion-1][1]);
 
          calculateCorrectAnswer()
          
