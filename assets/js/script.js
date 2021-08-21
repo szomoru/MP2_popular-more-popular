@@ -163,8 +163,6 @@ const dataBaseArray =
 
    var newGameArray = [];
 
-   var randNumArray = [];
-
    var nrOfQuestion = 1;
 
    document.addEventListener("DOMContentLoaded", function () {
@@ -185,56 +183,37 @@ const dataBaseArray =
    function newGame(){
       
       addSearchVolume();    /* --- calling addSearchVolume function ---*/
-      for (let i=0; i<20; i++) {
-         let randomNumber = Math.floor(Math.random()*20);
-         if (randNumArray.length < 2) {
-            randNumArray.push(randomNumber);
-         }
-         else {
-            if (randNumArray.includes(randomNumber)) {
-               randomNumber = Math.floor(Math.random()*20);
-               randNumArray.push(randomNumber);
-            }
-            else {
-               randNumArray.push(randomNumber);
-            }     
-         }
-      }
 
-      console.log(randNumArray);
-     
-       /* --- Create a random number array with 5 pairs ---*/
-      /*for (let i=0; i<10; i++) {                                      
-         let randomNumber1 = Math.floor(Math.random()*20);  /* --- Create random number 1 from 0 to 20---*/
-      /*   let randomNumber2 = Math.floor(Math.random()*20);  /* --- Create random number 2 from 0 to 20 ---*/
-      /*     if ( randomNumber1 == randomNumber2) {              /* --- if statement with the do while cycle make sure that 1 pair wont contain the same numbers --- */
-      /*         do {                                      
-                  randomNumber2 = Math.floor(Math.random()*20);
-               }
-               while (randomNumber1 != randomNumber2);
-            }
-         randNumArray.push([randomNumber1,randomNumber2]);
+      shuffleArray();      /* --- calling shuffleArray function ---*/
+      
+      newGameArray = new Array;        /* --- define the array as new that will contain the comp pairs from the shuffled array. by defining as new array makes it happen that every time when the user clicks (Start game button the game array brand new) ---*/
+      for (let j=0; j<arrayToShuffle.length; j+=2) {                
+         newGameArray.push([dataBaseArray[arrayToShuffle[j]],dataBaseArray[arrayToShuffle[j+1]]]);  /* --- create the new game array from shuffled array  ---*/
       }
-      console.log(randNumArray);
-      /*flatRandNumArray = randNumArray.flat();      /* --- I need 10 random number where i am sure that there are no repeated numbers after eachoder directly (with 2-3 numbers gap it is not a problem) --- */ 
-      /*console.log(flatRandNumArray);               /* --- 1 game has 10 guess, so by flattening the 5 pairs I get an array which contains 10 random number and there is no repeated numbers directly after eachother ---*/
-                                                      
-      
-      for (let j=0; j<randNumArray.length; j+=2) {                /* --- the flattened array is used to definet the new game array. the flattened array values are the indexes of the database array elements. the new game array contains the database elements with all object information. ---*/
-         newGameArray.push([dataBaseArray[randNumArray[j]],dataBaseArray[randNumArray[j+1]]]);
-      }
-      
-      
-      /*for (let j=0; j<randNumArray.length; j++){
-         newGameArray.push(dataBaseArray[randNumArray[j]]);
-      }*/
-
 
       console.log(newGameArray);
       updateGameArea();
 
    }
 
+   function shuffleArray () {
+      arrayToShuffle = new Array;               /* --- define the array that will be shuffled ---*/
+      let arrayToShuffleLength = 20;
+      
+      for (let i=0; i<arrayToShuffleLength; i++){     /* --- creates the array that will be shuffled ---*/
+         arrayToShuffle[i]= i;
+      }
+
+      for (let x = arrayToShuffle.length - 1; x > 0; x--) {       /* --- shuffle the created array according to the Fisher-Yates algorithm ---*/
+         let y = Math.floor(Math.random() * (x+1));         
+         const temp = arrayToShuffle[x];
+         arrayToShuffle[x] = arrayToShuffle[y];
+         arrayToShuffle[y] = temp;
+      }
+
+      console.log(arrayToShuffle);
+
+   }
 
 function createQuestionCard(user){
    return `
@@ -269,14 +248,14 @@ function createQuestionCard(user){
    }
 
    function calculateCorrectAnswer() {
-      if (newGameArray[nrOfQuestion-1].searchVolume > newGameArray[nrOfQuestion].searchVolume) {
+      if (newGameArray[nrOfQuestion-1][0].searchVolume > newGameArray[nrOfQuestion-1][1].searchVolume) {
          console.log("The winner is Comp1");
-         console.log(newGameArray[nrOfQuestion-1].searchVolume);
-         console.log(newGameArray[nrOfQuestion].searchVolume)}
+         console.log(newGameArray[nrOfQuestion-1][0].searchVolume);
+         console.log(newGameArray[nrOfQuestion-1][1].searchVolume)}
          else {
             console.log("The winner is Comp2");
-            console.log(newGameArray[nrOfQuestion-1].searchVolume);
-            console.log(newGameArray[nrOfQuestion].searchVolume)}
+            console.log(newGameArray[nrOfQuestion-1][0].searchVolume);
+            console.log(newGameArray[nrOfQuestion-1][1].searchVolume)}
          
       } 
       /*let compOneVolume = newGameArray[0].searchVolume;
