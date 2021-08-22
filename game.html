@@ -77,38 +77,40 @@
 
         <div class="comp-title">   
             <h3>Who was More Popular in the last 30 days?</h3>
-            <button id="startBtn" data-type="newGame" class="btn-start btn--big grow">Start Game</button>
+            <button id="startBtn" data-type="newGame" class="btn-start btn--big grow">Start New Game</button>
         </div>
 
         <div class="comp-section">
-            <div id="comp-section-left" onclick="checkAnswer(event)" class="comp-item-1 grow">
+            <div id="comp-section-left" class="comp-item-1 grow">
               <img class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
               <div class="info-panel">
-                <p><strong>Information</strong></p>
+                <p class="name"><strong>Name: </strong></p>
+                <p><strong>Profession: </strong></p>
+                <p><strong>Date of birth: </strong></p>
+                <p><strong>Place of birth: </strong></p>
+                <p><strong>More info: </strong></p>
               </div>
             </div>
 
-            <div id="comp-section-right" onclick="checkAnswer()" class="comp-item-2 grow">
-              <div class="btn-img-container">
-                <img class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
-                <div class="btn-container grow">
-                  <button type="submit" class="btn btn-secondary btn-format btn-up"><i class="fas fa-caret-up"></i></button>
-                  <button type="submit" class="btn btn-secondary btn-format btn-down"><i class="fas fa-caret-down"></i></button>
-                </div>                        
-              </div>
+            <div id="comp-section-right" class="comp-item-2 grow">
+              <img class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
               <div class="info-panel">
-                <p><strong>Information</strong></p>
+                <p class="name"><strong>Name: </strong></p>
+                <p><strong>Profession: </strong></p>
+                <p><strong>Date of birth: </strong></p>
+                <p><strong>Place of birth: </strong></p>
+                <p><strong>More info: </strong></p>
               </div>
             </div>
         </div>
 
-            <div class="score-section">
-              <div class="score-panel">
-                <p>Question: <span id="questionNumber">0</span>/10</p>
-                <p class="correctAnswer">Correct Answer: <span>0</span></p>
-                <p class="wrongAnswer">Wrong Answer: <span>0</span></p>
-              </div>
-            </div>
+        <div class="score-section">
+          <div class="score-panel">
+            <p>Question: <span id="questionNumber">0</span>/10</p>
+            <p class="correctAnswer">Correct Answer: <span id="correctAnswer">0</span></p>
+            <p class="wrongAnswer">Wrong Answer: <span id="wrongAnswer">0</span></p>
+          </div>
+        </div>
 
         </div>
         

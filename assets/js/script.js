@@ -165,6 +165,8 @@ const dataBaseArray =
 
    var nrOfQuestion = 1;
 
+   var winnerName, winnerNameUser;
+
    document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("startBtn").addEventListener("click", newGame);
    })
@@ -181,19 +183,14 @@ const dataBaseArray =
    
 
    function newGame(){
-      
       addSearchVolume();    /* --- calling addSearchVolume function ---*/
-
       shuffleArray();      /* --- calling shuffleArray function ---*/
-      
       newGameArray = new Array;        /* --- define the array as new that will contain the comp pairs from the shuffled array. by defining as new array makes it happen that every time when the user clicks (Start game button the game array brand new) ---*/
       for (let j=0; j<arrayToShuffle.length; j+=2) {                
          newGameArray.push([dataBaseArray[arrayToShuffle[j]],dataBaseArray[arrayToShuffle[j+1]]]);  /* --- create the new game array from shuffled array  ---*/
       }
-
       console.log(newGameArray);
       updateGameArea();
-
    }
 
    function shuffleArray () {
@@ -210,83 +207,76 @@ const dataBaseArray =
          arrayToShuffle[x] = arrayToShuffle[y];
          arrayToShuffle[y] = temp;
       }
-
       console.log(arrayToShuffle);
-
    }
 
 function createQuestionCard(user){
    return `
    <img class="comp-image" src="${user.pictureLocation}" alt="${user.name}">
    <div class="info-panel">
-      <p><strong>Name:</strong> ${user.name}</p>
-      <p><strong>Profession:</strong> ${user.profession}</p>
-      <p><strong>Date of birth:</strong> ${user.dateOfBirth}</p>
-      <p><strong>Place of birth:</strong> ${user.placeOfBirth}</p>
-      <p><strong>More info:</strong> <a href="${user.info}">Wikipedia</a></p>
-</div>`
+      <p><strong>Name: </strong><span id="name" name_id="${user.name}">${user.name}</span></p>
+      <p><strong>Profession: </strong>${user.profession}</p>
+      <p><strong>Date of birth: </strong>${user.dateOfBirth}</p>
+      <p><strong>Place of birth: </strong>${user.placeOfBirth}</p>
+      <p><strong>More info: </strong><a href="${user.info}">Wikipedia</a></p>   
+   </div>`
 }
 
-   function updateGameArea(){
-      updateQuestionNr();
-      let compSectionLeft = document.getElementById("comp-section-left");
-         compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1][0]);
+function updateGameArea(){
+   updateQuestionNr();
+   let compSectionLeft = document.getElementById("comp-section-left");
+   compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1][0]);
+   let compSectionRight = document.getElementById("comp-section-right");
+   compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion-1][1]);
+   calculateCorrectAnswer();  
+   checkAnswer();  
+}
 
-         let compSectionRight = document.getElementById("comp-section-right");
+function updateQuestionNr() {
+   document.getElementById("questionNumber").innerText = nrOfQuestion;   
+}
 
-         compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion-1][1]);
+function calculateCorrectAnswer() {
+   if (newGameArray[nrOfQuestion-1][0].searchVolume > newGameArray[nrOfQuestion-1][1].searchVolume) {
+      winnerName = newGameArray[nrOfQuestion-1][0].name;
+      console.log(winnerName);
+      console.log(newGameArray[nrOfQuestion-1][0].searchVolume);
+      console.log(newGameArray[nrOfQuestion-1][1].searchVolume);}
+   else {
+      winnerName = newGameArray[nrOfQuestion-1][1].name;
+      console.log(winnerName);
+      console.log(newGameArray[nrOfQuestion-1][0].searchVolume);
+      console.log(newGameArray[nrOfQuestion-1][1].searchVolume)}
+   } 
 
-         calculateCorrectAnswer()
-         
-   }
-
-   function updateQuestionNr() {
-      /*let questionNumber = parseInt(document.getElementById("questionNumber").innerText);*/
-      document.getElementById("questionNumber").innerText = nrOfQuestion;
-
-      
-   }
-
-   function calculateCorrectAnswer() {
-      if (newGameArray[nrOfQuestion-1][0].searchVolume > newGameArray[nrOfQuestion-1][1].searchVolume) {
-         console.log("The winner is Comp1");
-         console.log(newGameArray[nrOfQuestion-1][0].searchVolume);
-         console.log(newGameArray[nrOfQuestion-1][1].searchVolume)}
-         else {
-            console.log("The winner is Comp2");
-            console.log(newGameArray[nrOfQuestion-1][0].searchVolume);
-            console.log(newGameArray[nrOfQuestion-1][1].searchVolume)}
-         
-      } 
-      /*let compOneVolume = newGameArray[0].searchVolume;
+function checkAnswer() {
+   console.log("Calculated winner Name:" + winnerName);
    
-      let compTwoVolume = newGameArray[1].searchVolume;
+   document.getElementById("comp-section-left").addEventListener("click", function() {
+      winnerNameUser = newGameArray[nrOfQuestion-1][0].name;
+      console.log("Usewr winner selection: "+ winnerNameUser);
+      if (winnerNameUser === winnerName) {
+         incrementScoreCorrect();
+         updateGameArea()}
+      else {
+         incrementScoreWrong();
+         updateGameArea();
+      }  
       
-      if (compOneVolume>compTwoVolume) {
-         return compOneVolume;
-         }
-         else {
-            return compTwoVolume;
-         }*/
-      
+   });
 
-   function checkAnswer(e) {
-      
-      console.log(e);
-
-      /*document.getElementById("comp-section-left").addEventListener("click", function() {
-         let g= this.getAttribute("data-type")
-         console.log(g);
-      })
-
-      document.getElementById("comp-section-right").addEventListener("click", function() {
-         let z= this.getAttribute("data-type")
-         console.log(z);
-      })*/
-      nrOfQuestion = ++nrOfQuestion;
-      console.log(nrOfQuestion);
-      updateGameArea();
-   }
+   document.getElementById("comp-section-right").addEventListener("click", function() {
+      winnerNameUser = newGameArray[nrOfQuestion-1][1].name;
+      console.log("Usewr winner selection: "+ winnerNameUser);
+      if (winnerNameUser === winnerName) {
+         incrementScoreCorrect();
+         updateGameArea();
+      }
+      else {
+         incrementScoreWrong();
+         updateGameArea()}
+   }); 
+}
 
 
       /*document.getElementsByClassName("clickCheck").addEventListener("click", console.log("This works"));/*function() {
@@ -300,19 +290,24 @@ function createQuestionCard(user){
        console.log("You reached me");
       })*/
          
-   
 
-   function incrementScore() {
+      function incrementNrOfQuestion() {
+         nrOfQuestion = ++nrOfQuestion;
+         console.log(nrOfQuestion);
+
+      }
+   
+      function incrementScoreCorrect() {
 
       let oldScoreCorrect = parseInt(document.getElementById("correctAnswer").innerText);
       console.log(oldScoreCorrect);
       document.getElementById("correctAnswer").innerText = ++oldScoreCorrect;
-   }
+      }
+      
     
-   function incrementWrongAnswer() {
+   function incrementScoreWrong() {
     
      let oldScoreWrong = parseInt(document.getElementById("wrongAnswer").innerText);
      console.log(oldScoreWrong);
      document.getElementById("wrongAnswer").innerText = ++oldScoreWrong;
-    
-   }
+    }
