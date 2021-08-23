@@ -206,8 +206,8 @@ function shuffleArray () {                      /* --- This function randomly sh
       console.log(arrayToShuffle);
 }
 
-function createQuestionCard(user){                          /* --- This function fetching the object values into the HTML content of the comp-section  ---*/
-   return `                                                  
+/*function createQuestionCard(user){                          /* --- This function fetching the object values into the HTML content of the comp-section  ---*/
+/*   return `                                                  
    <img class="comp-image" src="${user.pictureLocation}" alt="${user.name}">  
    <div class="info-panel">
       <p><strong>Name: </strong><span id="name" name_id="${user.name}">${user.name}</span></p>
@@ -219,10 +219,38 @@ function createQuestionCard(user){                          /* --- This function
 }
 
 function updateGameArea(){                                        /* --- This function updatiing the HTML elements in the comp-section---*/
-   updateQuestionNr();
+/*   updateQuestionNr();
    let compSectionLeft = document.getElementById("comp-section-left");
    compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1][0]);
    let compSectionRight = document.getElementById("comp-section-right");
+   compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion-1][1]);
+   calculateCorrectAnswer();  
+   checkAnswer();  
+}*/
+
+function createQuestionCard(user){                          /* --- This function fetching the object values into the HTML content of the comp-section  ---*/
+   return `
+         <p><strong>Name: </strong><span id="name" name_id="${user.name}">${user.name}</span></p>
+         <p><strong>Profession: </strong>${user.profession}</p>
+         <p><strong>Date of birth: </strong>${user.dateOfBirth}</p>
+         <p><strong>Place of birth: </strong>${user.placeOfBirth}</p>
+         <p><strong>More info: </strong><a href="${user.info}">Wikipedia</a></p>`,
+
+   }
+
+function updateGameArea(){                                        /* --- This function updating the HTML elements in the comp-section---*/
+   updateQuestionNr();
+
+   let compSectionLeftImg = document.getElementById("compImgLeft");
+   compSectionLeftImg.setAttribute("src", newGameArray[nrOfQuestion-1][0].pictureLocation);
+   compSectionLeftImg.setAttribute("alt", newGameArray[nrOfQuestion-1][0].name);
+   let compSectionLeft = document.getElementById("infoSectLeft");
+   compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1][0]);
+
+   let compSectionRightImg = document.getElementById("compImgRight");
+   compSectionRightImg.setAttribute("src", newGameArray[nrOfQuestion-1][1].pictureLocation);
+   compSectionRightImg.setAttribute("alt", newGameArray[nrOfQuestion-1][1].name);
+   let compSectionRight = document.getElementById("infoSectRight");
    compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion-1][1]);
    calculateCorrectAnswer();  
    checkAnswer();  
