@@ -159,41 +159,37 @@ const dataBaseArray =
    pictureLocation: './assets/img/people/Mata_Hari_640x640_tiny.jpg ',
    searchVolume: 0 }]
 
-   var searchVolumeArray = [25, 56, 89, 24, 65, 687, 357, 367, 687, 123, 74354, 45, 68, 72, 732, 7423, 682, 98, 426, 3247]
+var searchVolumeArray = [25, 56, 89, 24, 65, 687, 357, 367, 687, 123, 74354, 45, 68, 72, 732, 7423, 682, 98, 426, 3247]
 
-   var newGameArray = [];
+var newGameArray = [];
 
-   var nrOfQuestion = 1;
+var nrOfQuestion = 1;
 
-   var winnerName, winnerNameUser;
+var winnerName, winnerNameUser;
 
-   document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("startBtn").addEventListener("click", newGame);
-   })
+document.addEventListener("DOMContentLoaded", function () {                /* --- check if everything is loaded and listen if the Start New Game button is clicked ---*/
+   document.getElementById("startBtn").addEventListener("click", newGame);
+})
 
-
-
-   function addSearchVolume() {
-      for (let i=0; i<20; i++) {
-         dataBaseArray[i]["searchVolume"] = searchVolumeArray[i];
-         console.log(dataBaseArray[i].searchVolume);
-      }
+function addSearchVolume() {                 /* --- Fill up the search Volume object value in the Database array ---*/
+   for (let i=0; i<20; i++) {
+      dataBaseArray[i]["searchVolume"] = searchVolumeArray[i];
+      console.log(dataBaseArray[i].searchVolume);
    }
+}
 
-   
-
-   function newGame(){
-      addSearchVolume();    /* --- calling addSearchVolume function ---*/
-      shuffleArray();      /* --- calling shuffleArray function ---*/
-      newGameArray = new Array;        /* --- define the array as new that will contain the comp pairs from the shuffled array. by defining as new array makes it happen that every time when the user clicks (Start game button the game array brand new) ---*/
-      for (let j=0; j<arrayToShuffle.length; j+=2) {                
-         newGameArray.push([dataBaseArray[arrayToShuffle[j]],dataBaseArray[arrayToShuffle[j+1]]]);  /* --- create the new game array from shuffled array  ---*/
-      }
-      console.log(newGameArray);
-      updateGameArea();
+function newGame(){     /* --- This function is the main function and executed when the user clicks on the Start New Game button ---*/
+   addSearchVolume();    /* --- calling addSearchVolume function ---*/
+   shuffleArray();      /* --- calling shuffleArray function ---*/
+   newGameArray = new Array;        /* --- define the array as new that will contain the comp pairs from the shuffled array. by defining as new array makes it happen that every time when the user clicks (Start game button the game array brand new) ---*/
+   for (let j=0; j<arrayToShuffle.length; j+=2) {             /* --- From the shuffled array creates the game array, which contains 10 2 elements array ---*/   
+      newGameArray.push([dataBaseArray[arrayToShuffle[j]],dataBaseArray[arrayToShuffle[j+1]]]);  /* --- create the new game array from shuffled array  ---*/
    }
+   console.log(newGameArray);
+   updateGameArea();
+}
 
-   function shuffleArray () {
+function shuffleArray () {                      /* --- This function randomly shuffle my basic array ---*/
       arrayToShuffle = new Array;               /* --- define the array that will be shuffled ---*/
       let arrayToShuffleLength = 20;
       
@@ -208,11 +204,11 @@ const dataBaseArray =
          arrayToShuffle[y] = temp;
       }
       console.log(arrayToShuffle);
-   }
+}
 
-function createQuestionCard(user){
-   return `
-   <img class="comp-image" src="${user.pictureLocation}" alt="${user.name}">
+function createQuestionCard(user){                          /* --- This function fetching the object values into the HTML content of the comp-section  ---*/
+   return `                                                  
+   <img class="comp-image" src="${user.pictureLocation}" alt="${user.name}">  
    <div class="info-panel">
       <p><strong>Name: </strong><span id="name" name_id="${user.name}">${user.name}</span></p>
       <p><strong>Profession: </strong>${user.profession}</p>
@@ -222,7 +218,7 @@ function createQuestionCard(user){
    </div>`
 }
 
-function updateGameArea(){
+function updateGameArea(){                                        /* --- This function updatiing the HTML elements in the comp-section---*/
    updateQuestionNr();
    let compSectionLeft = document.getElementById("comp-section-left");
    compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1][0]);
@@ -232,11 +228,11 @@ function updateGameArea(){
    checkAnswer();  
 }
 
-function updateQuestionNr() {
+function updateQuestionNr() {                                     /* --- This function updating the questionNumber HTML element   ---*/
    document.getElementById("questionNumber").innerText = nrOfQuestion;   
 }
 
-function calculateCorrectAnswer() {
+function calculateCorrectAnswer() {                            /* --- This function comparing the values of the searchVolume object key and fetching the name object key values. By this it calculates who id the winner of the comaprisation ---*/
    if (newGameArray[nrOfQuestion-1][0].searchVolume > newGameArray[nrOfQuestion-1][1].searchVolume) {
       winnerName = newGameArray[nrOfQuestion-1][0].name;
       console.log(winnerName);
@@ -247,11 +243,11 @@ function calculateCorrectAnswer() {
       console.log(winnerName);
       console.log(newGameArray[nrOfQuestion-1][0].searchVolume);
       console.log(newGameArray[nrOfQuestion-1][1].searchVolume)}
-   } 
+} 
 
-function checkAnswer() {
-   console.log("Calculated winner Name:" + winnerName);
-   
+function checkAnswer() {                                 /* --- This function listen which Comp item is clicked. Based on the clicking it fetches the name object key values what is displayed in the clicked comp item */
+   console.log("Calculated winner Name:" + winnerName);  /*  Following this step the function compare the calculated winner name and the user selected winner name ---*/
+                                                         /* if there is a match it increase the correct answer counter, otherwise the wrong answer counter ---*/
    document.getElementById("comp-section-left").addEventListener("click", function() {
       winnerNameUser = newGameArray[nrOfQuestion-1][0].name;
       console.log("Usewr winner selection: "+ winnerNameUser);
@@ -261,11 +257,10 @@ function checkAnswer() {
       else {
          incrementScoreWrong();
          updateGameArea();
-      }  
-      
+      }    
    });
 
-   document.getElementById("comp-section-right").addEventListener("click", function() {
+   document.getElementById("comp-section-right").addEventListener("click", function() {      /* --- This is the listener of the right section of the comparisation window ---*/
       winnerNameUser = newGameArray[nrOfQuestion-1][1].name;
       console.log("Usewr winner selection: "+ winnerNameUser);
       if (winnerNameUser === winnerName) {
@@ -277,37 +272,20 @@ function checkAnswer() {
          updateGameArea()}
    }); 
 }
-
-
-      /*document.getElementsByClassName("clickCheck").addEventListener("click", console.log("This works"));/*function() {
-      if (this.getAttribute("data-type") === "compOneVolume" ) {
-         console.log("CONGRTATULATION!");
-         incrementScore();}
-         else { 
-            console.log("Too BAd");
-            incrementWrongAnswer();
-         }
-       console.log("You reached me");
-      })*/
-         
-
-      function incrementNrOfQuestion() {
-         nrOfQuestion = ++nrOfQuestion;
-         console.log(nrOfQuestion);
-
-      }
+  
+function incrementNrOfQuestion() {     /* --- This function increase the nrOfQuestion variable by 1 ---*/
+   nrOfQuestion = ++nrOfQuestion;
+   console.log(nrOfQuestion);
+}
    
-      function incrementScoreCorrect() {
-
-      let oldScoreCorrect = parseInt(document.getElementById("correctAnswer").innerText);
+function incrementScoreCorrect() {     /* --- When this function is called it fetches the old CORRECT answer score value and increase it by 1 ---*/
+   let oldScoreCorrect = parseInt(document.getElementById("correctAnswer").innerText);
       console.log(oldScoreCorrect);
       document.getElementById("correctAnswer").innerText = ++oldScoreCorrect;
-      }
+}
       
-    
-   function incrementScoreWrong() {
-    
-     let oldScoreWrong = parseInt(document.getElementById("wrongAnswer").innerText);
-     console.log(oldScoreWrong);
-     document.getElementById("wrongAnswer").innerText = ++oldScoreWrong;
-    }
+function incrementScoreWrong() {       /* --- When this function is called it fetches the old WRONG answer score value and increase it by 1 ---*/
+   let oldScoreWrong = parseInt(document.getElementById("wrongAnswer").innerText);
+      console.log(oldScoreWrong);
+      document.getElementById("wrongAnswer").innerText = ++oldScoreWrong;
+}
