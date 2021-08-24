@@ -11,108 +11,68 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <title>Popular More Popular | Game Page</title>
 </head>
 <body>
 
-    <header>
-       <!-- <div class="navigation-menu">
-            <div id="title">
-                <h1>
-                    <a href="index.html">Popular More Popular</a>
-                </h1>
-            </div>
-        <div class="nav-menu"></div>
-                
-                    <ul class="navigation-list">
-                        <li class="nav-menu-item list-inline-item"><a href="#">How to play</a></li>
-                        <li class="nav-menu-item list-inline-item"><a href="#">Contact</a></li>
-                        <li class="nav-menu-item list-inline-item"><a href="#">Contact</a></li>
-                    </ul>
-                
-            </div>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <p>Popular More Popular</p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link grow" href="about.html">About the Game</a>
+        <a class="nav-item nav-link active grow" href="game.html">Game</a>
+        <a class="nav-item nav-link grow" href="contact.html">Contact</a>
+        <a class="nav-item nav-link grow" href="#">Links</a>
+      </div>
+    </div>
+  </nav>
+</header>
 
 
-            <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-                    data-mdb-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                  </button>
-                </div>
-              </nav>
-              <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-light shadow-3 p-4">
-                  <button class="btn btn-link btn-block border-bottom m-0">Link 1</button>
-                  <button class="btn btn-link btn-block border-bottom m-0">Link 2</button>
-                  <button class="btn btn-link btn-block m-0">Link 3</button>
-                </div>
-              </div>
+<section>
+  <div class="game-section">
+    <div class="comp-title">   
+      <h3>Who was More Popular in the last 30 days?</h3>
+      <button id="startBtn" data-type="newGame" class="btn-start btn--big grow">Start New Game</button>
+    </div>
 
-
-        </div> 
-    </header>
-    <div>-->
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <p>Popular More Popular</p>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active grow" href="#">Home</a>
-            <a class="nav-item nav-link grow" href="#">How to play</a>
-            <a class="nav-item nav-link grow" href="#">Contact</a>
-            <a class="nav-item nav-link grow" href="#">Links</a>
-          </div>
+    <div class="comp-section">
+      <div id="comp-section-left" onclick="userAnswerLeft()" class="comp-item-1 grow">
+        <img id="compImgLeft" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
+        <div id="infoSectLeft" class="info-panel">
+          <p class="name"><strong>Name: </strong></p>
+          <p><strong>Profession: </strong></p>
+          <p><strong>Date of birth: </strong></p>
+          <p><strong>Place of birth: </strong></p>
+          <p><strong>More info: </strong></p>
         </div>
-      </nav>
-    <!--</div>-->
-    </header>
+       </div>
 
-
-    <section>
-      <div class="game-section">
-
-        <div class="comp-title">   
-            <h3>Who was More Popular in the last 30 days?</h3>
-            <button id="startBtn" data-type="newGame" class="btn-start btn--big grow">Start New Game</button>
+      <div id="comp-section-right" onclick="userAnswerRight()" class="comp-item-2 grow">
+        <img id="compImgRight" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
+        <div id="infoSectRight" class="info-panel">
+          <p class="name"><strong>Name: </strong></p>
+          <p><strong>Profession: </strong></p>
+          <p><strong>Date of birth: </strong></p>
+          <p><strong>Place of birth: </strong></p>
+          <p><strong>More info: </strong></p>
         </div>
+      </div>
+    </div>
 
-        <div class="comp-section">
-            <div id="comp-section-left" onclick="userAnswerLeft()" class="comp-item-1 grow">
-              <img id="compImgLeft" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
-              <div id="infoSectLeft" class="info-panel">
-                <p class="name"><strong>Name: </strong></p>
-                <p><strong>Profession: </strong></p>
-                <p><strong>Date of birth: </strong></p>
-                <p><strong>Place of birth: </strong></p>
-                <p><strong>More info: </strong></p>
-              </div>
-            </div>
+    <div class="score-section">
+      <div class="score-panel">
+        <p>Question: <span id="questionNumber">0</span>/10</p>
+        <p class="correctAnswer">Correct Answer: <span id="correctAnswer">0</span></p>
+        <p class="wrongAnswer">Wrong Answer: <span id="wrongAnswer">0</span></p>
+      </div>
+     </div>
 
-            <div id="comp-section-right" onclick="userAnswerRight()" class="comp-item-2 grow">
-              <img id="compImgRight" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
-              <div id="infoSectRight" class="info-panel">
-                <p class="name"><strong>Name: </strong></p>
-                <p><strong>Profession: </strong></p>
-                <p><strong>Date of birth: </strong></p>
-                <p><strong>Place of birth: </strong></p>
-                <p><strong>More info: </strong></p>
-              </div>
-            </div>
-        </div>
-
-        <div class="score-section">
-          <div class="score-panel">
-            <p>Question: <span id="questionNumber">0</span>/10</p>
-            <p class="correctAnswer">Correct Answer: <span id="correctAnswer">0</span></p>
-            <p class="wrongAnswer">Wrong Answer: <span id="wrongAnswer">0</span></p>
-          </div>
-        </div>
-
-        </div>
+  </div>
         
         
         <!--<div class="trend-section">
@@ -122,13 +82,13 @@
         </div> -->
         
         
-    </section>
+</section>
 
     
 
-    <footer id="lp-footer" class="trend-section vertical-align-center horizontal-align-center">
-      <h6>Copyright 2021 <i class="far fa-copyright"></i></h6>
-    </footer>
+<footer id="lp-footer" class="trend-section vertical-align-center horizontal-align-center">
+  <h6>Copyright 2021 <i class="far fa-copyright"></i></h6>
+</footer>
     
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
