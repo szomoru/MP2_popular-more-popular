@@ -126,7 +126,6 @@ header {
     text-decoration: none;
     color: #f57f17;
     font-size: 2rem;
-
     margin: 0;
     padding: 10px;
     border: solid 3px #f57f17;
@@ -138,9 +137,9 @@ header {
 
 /* ---- GAME SECTION ----- */
 
-.game-section {
+.main-section {
     display: flex;
-    flex-direction: column;
+    
     justify-content: space-evenly;
     margin: 0;
     /*border: solid 3px #ffffff;*/
@@ -149,6 +148,10 @@ header {
     background-color: #e0e0e0 ;
     text-align: center;
     max-height: max-content;
+}
+
+.game-section {
+    flex-direction: column;
 }
 
 
@@ -419,6 +422,29 @@ iframe element.style {
     transform: scale(1.02);
 }
 
+
+/* ---------- Contact Form ----------*/
+
+.center-form {
+    margin: 0;
+    padding: 50px;
+}
+
+.btn-form {
+  margin-top: 2rem;
+}
+
+.contact-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 70vh;
+}
+
+.main-section h3{
+    margin: 2rem;
+    color: #424242;
+
+}
 
 /* ---------- MEDIA QUERIES ----------*/
 
