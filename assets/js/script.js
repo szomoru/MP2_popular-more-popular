@@ -210,28 +210,6 @@ function shuffleArray () {                      /* --- This function randomly sh
       console.log(arrayToShuffle);
 }
 
-/*function createQuestionCard(user){                          /* --- This function fetching the object values into the HTML content of the comp-section  ---*/
-/*   return `                                                  
-   <img class="comp-image" src="${user.pictureLocation}" alt="${user.name}">  
-   <div class="info-panel">
-      <p><strong>Name: </strong><span id="name" name_id="${user.name}">${user.name}</span></p>
-      <p><strong>Profession: </strong>${user.profession}</p>
-      <p><strong>Date of birth: </strong>${user.dateOfBirth}</p>
-      <p><strong>Place of birth: </strong>${user.placeOfBirth}</p>
-      <p><strong>More info: </strong><a href="${user.info}">Wikipedia</a></p>   
-   </div>`
-}
-
-function updateGameArea(){                                        /* --- This function updatiing the HTML elements in the comp-section---*/
-/*   updateQuestionNr();
-   let compSectionLeft = document.getElementById("comp-section-left");
-   compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1][0]);
-   let compSectionRight = document.getElementById("comp-section-right");
-   compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion-1][1]);
-   calculateCorrectAnswer();  
-   checkAnswer();  
-}*/
-
 function createQuestionCard(user){                          /* --- This function fetching the object values into the HTML content of the comp-section  ---*/
    return `
          <p><strong>Name: </strong><span id="name" name_id="${user.name}">${user.name}</span></p>
@@ -250,32 +228,28 @@ function updateGameArea(){
          newGame();
       }
       else {
-         alert("SORRY DUDE. MAYBE YOU WILL HAVE BETTER LUCK NEXT TIME! :(");
+         alert("SORRY DUDE! YOU WILL HAVE BETTER LUCK NEXT TIME! :(");
          newGame();
       }
    } else {                                  /* --- This function updating the HTML elements in the comp-section---*/
 
-   let compSectionLeftImg = document.getElementById("compImgLeft");
-   compSectionLeftImg.setAttribute("src", newGameArray[nrOfQuestion-1][0].pictureLocation);
-   compSectionLeftImg.setAttribute("alt", newGameArray[nrOfQuestion-1][0].name);
-   let compSectionLeft = document.getElementById("infoSectLeft");
-   compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1][0]);
+         let compSectionLeftImg = document.getElementById("compImgLeft");
+         compSectionLeftImg.setAttribute("src", newGameArray[nrOfQuestion-1][0].pictureLocation);
+         compSectionLeftImg.setAttribute("alt", newGameArray[nrOfQuestion-1][0].name);
+         let compSectionLeft = document.getElementById("infoSectLeft");
+         compSectionLeft.innerHTML= createQuestionCard(newGameArray[nrOfQuestion-1][0]);
 
-   let compSectionRightImg = document.getElementById("compImgRight");
-   compSectionRightImg.setAttribute("src", newGameArray[nrOfQuestion-1][1].pictureLocation);
-   compSectionRightImg.setAttribute("alt", newGameArray[nrOfQuestion-1][1].name);
-   let compSectionRight = document.getElementById("infoSectRight");
-   compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion-1][1]);
+         let compSectionRightImg = document.getElementById("compImgRight");
+         compSectionRightImg.setAttribute("src", newGameArray[nrOfQuestion-1][1].pictureLocation);
+         compSectionRightImg.setAttribute("alt", newGameArray[nrOfQuestion-1][1].name);
+         let compSectionRight = document.getElementById("infoSectRight");
+         compSectionRight.innerHTML=createQuestionCard(newGameArray[nrOfQuestion-1][1]);
 
-   calculateCorrectAnswer();
-   console.log("The calculated correct answer: " + calculateCorrectAnswer());
-   }
+         calculateCorrectAnswer();
+         console.log("The calculated correct answer: " + calculateCorrectAnswer());
+         }
   
 }
-
-/*function updateQuestionNr() {                                     /* --- This function updating the questionNumber HTML element   ---*/
-  /* document.getElementById("questionNumber").innerText = nrOfQuestion;   
-}*/
 
 function calculateCorrectAnswer() {                            /* --- This function comparing the values of the searchVolume object key and fetching the name object key values. By this it calculates who id the winner of the comaprisation ---*/
    if (newGameArray[nrOfQuestion-1][0].searchVolume > newGameArray[nrOfQuestion-1][1].searchVolume) {
@@ -287,38 +261,20 @@ function calculateCorrectAnswer() {                            /* --- This funct
 } 
 
 function userAnswerLeft() {
-
-/*document.getElementById("comp-section-left").addEventListener("click", function() {         /* --- This is the listener of the left section of the comparisation window ---*/
-      userAnswer = newGameArray[nrOfQuestion-1][0].name;
-      let compSectionLeft = document.getElementById("comp-section-left");
-
-      console.log("The selected user answer: " + userAnswer);
-      checkAnswer();
+   userAnswer = newGameArray[nrOfQuestion-1][0].name;
+   let compSectionLeft = document.getElementById("comp-section-left");
+   console.log("The selected user answer: " + userAnswer);
+   checkAnswer();
 }
 
 function userAnswerRight(){
-   /*document.getElementById("comp-section-right").addEventListener("click", function() {      /* --- This is the listener of the right section of the comparisation window ---*/
    userAnswer = newGameArray[nrOfQuestion-1][1].name;
    console.log("The selected user answer: " + userAnswer);
    checkAnswer();
 }
 
 
-function checkAnswer() {                                 /* --- This function listen which Comp item is clicked. Based on the clicking it fetches the name object key values what is displayed in the clicked comp item */
-   /*console.log("Calculated winner Name:" + winnerName);  /*  Following this step the function compare the calculated winner name and the user selected winner name ---*/
-                                                         /* if there is a match it increase the correct answer counter, otherwise the wrong answer counter ---*/
-   /*document.getElementById("comp-section-left").addEventListener("click", function() {
-      winnerNameUser = newGameArray[nrOfQuestion-1][0].name;
-      console.log("User winner selection: "+ winnerNameUser);
-      winnerNameUser === winnerName;    
-   });
-
-   document.getElementById("comp-section-right").addEventListener("click", function() {      /* --- This is the listener of the right section of the comparisation window ---*/
-   /*   winnerNameUser = newGameArray[nrOfQuestion-1][1].name;
-      console.log("Usewr winner selection: "+ winnerNameUser);
-      winnerNameUser === winnerName;
-   }); 
-   updateGameArea();*/
+function checkAnswer() {                               
    if (userAnswer == winnerName) {
       incrementScoreCorrect();
       updateGameArea();
@@ -332,7 +288,6 @@ function checkAnswer() {                                 /* --- This function li
 function incrementNrOfQuestion() {     /* --- This function increase the nrOfQuestion variable by 1 ---*/
    let oldQuestionNr = parseInt(document.getElementById("questionNumber").innerText);
    nrOfQuestion = document.getElementById("questionNumber").innerText = ++oldQuestionNr;  
-   
    return nrOfQuestion;
 }
    
