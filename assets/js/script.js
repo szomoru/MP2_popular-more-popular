@@ -222,15 +222,8 @@ function createQuestionCard(user){                          /* --- This function
 
 function updateGameArea(){ 
    console.log("The number of the question is: " + incrementNrOfQuestion());    
-   if (nrOfQuestion == 11) {
-      if (document.getElementById("correctAnswer").innerText > document.getElementById("wrongAnswer").innerText) {
-         alert("CONGRATULATION YOU ARE THE ABSOLUTE WINNER!!! :)");
-         newGame();
-      }
-      else {
-         alert("SORRY DUDE! YOU WILL HAVE BETTER LUCK NEXT TIME! :(");
-         newGame();
-      }
+   if (nrOfQuestion == 11) { 
+      endGame();
    } else {                                  /* --- This function updating the HTML elements in the comp-section---*/
 
          let compSectionLeftImg = document.getElementById("compImgLeft");
@@ -262,7 +255,6 @@ function calculateCorrectAnswer() {                            /* --- This funct
 
 function userAnswerLeft() {
    userAnswer = newGameArray[nrOfQuestion-1][0].name;
-   let compSectionLeft = document.getElementById("comp-section-left");
    console.log("The selected user answer: " + userAnswer);
    checkAnswer();
 }
@@ -276,9 +268,11 @@ function userAnswerRight(){
 
 function checkAnswer() {                               
    if (userAnswer == winnerName) {
+      
       incrementScoreCorrect();
       updateGameArea();
    } else if (userAnswer != winnerName) {
+      
       incrementScoreWrong();
       updateGameArea();
    }
@@ -302,3 +296,52 @@ function incrementScoreWrong() {       /* --- When this function is called it fe
       console.log(oldScoreWrong);
       document.getElementById("wrongAnswer").innerText = ++oldScoreWrong;
 }
+
+function endGame(){
+   if (document.getElementById("correctAnswer").innerText > document.getElementById("wrongAnswer").innerText) {
+      /*alert("CONGRATULATION YOU ARE THE ABSOLUTE WINNER!!! :)");*/
+      let modal = document.getElementById("modalWinner");
+      modal.style.display = "block";
+   }
+   else {
+      let modal = document.getElementById("modalLoser");
+      modal.style.display = "block";
+      /*alert("SORRY DUDE! YOU WILL HAVE BETTER LUCK NEXT TIME! :(");*/
+   }
+}
+
+function closeModal(event) {
+        modal.style.display = "none";
+}
+
+
+
+/*
+
+// Get the modal
+
+
+var modal = document.getElementById("modal-winner");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}*/

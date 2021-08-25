@@ -178,16 +178,19 @@ header {
     justify-content: center;   
     width: 100%;
     padding: 0;
-    
+    position: relative;
 }
 
 .comp-item-1 {
     border-left: solid 5px transparent;
+
 }
 
 .comp-item-2 {
     border-right: solid 5px transparent;
 }
+
+
 
 .comp-title {
     text-align: center;
@@ -197,6 +200,52 @@ header {
     color:#ab000d;
     font-size: 2em;
     padding: 1.5rem;
+}
+
+.layer-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 2;
+}
+
+.layer-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 2;
+}
+
+@keyframes layer-right{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
+
+.layer-correct {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(56, 142, 60, .3);
+    z-index: 2;
+}
+
+.layer-wrong {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(229, 57, 53, .3);
+    z-index: 2;
 }
 
 .btn-start {
@@ -270,6 +319,13 @@ img {
 .grow {
     transition: all .2s ease-in-out;
 }
+
+}
+.blink {
+  -webkit-animation: blink 0.2s linear infinite;
+  -moz-animation: blink 0.2s linear infinite;
+  animation: blink 0.2s linear infinite;
+} 
 
 .btn-container .btn {
     max-width: 50%;
@@ -420,18 +476,21 @@ iframe element.style {
     color: #f57f17;
 }
 
-.btn-img-container .btn-up:hover {
-    color: #00701a;
-    background-color: #76d275;
-  }
-
-.btn-img-container .btn-down:hover {
-    color: #ab000d;
-    background-color:#ff6f60;
-  }
-
 .grow:hover {
     transform: scale(1.02);
+}
+
+.layer-left:hover {
+    background-color: rgb(255, 176, 76, .3);
+    z-index: 2;
+    -webkit-animation: blink 1s linear infinite;
+    -moz-animation: blink 1s linear infinite;
+    animation: blink 1s linear infinite;
+}
+
+.layer-right:hover {
+    background-color: rgb(255, 176, 76, .3);
+    z-index: 2;
 }
 
 
@@ -474,7 +533,7 @@ iframe element.style {
 }
 
 #contact_form div {
-    margin bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .form-control {
@@ -546,6 +605,8 @@ iframe element.style {
         align-items: center;
         justify-content: center;
         margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 1;
     }
 
     .comp-item-1 {
@@ -557,5 +618,56 @@ iframe element.style {
     }
 
 
-
 }
+
+
+/* ----------------- MODAL ----------------*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    
+    margin: auto;
+    padding: 20px;
+    
+    border-radius: 2rem;
+    width: 50%;
+  }
+
+  #modalLoser .modal-content {
+    background-color:rgb(255, 205, 210, 0.85);
+  }
+
+  #modalWinner .modal-content {
+    background-color: rgb(200, 230, 201, 0.85);
+  }
+
+  #modalLoser h1 {
+    font-size: 1.2rem;
+    color: red;
+  }
+
+  #modalWinner h1 {
+    font-size: 1.2rem;
+    color: green;
+  }
+
+  .modalButtons button {
+      width: fit-content;
+      background-color: #ab000d;
+      color:#e0e0e0;
+  }
