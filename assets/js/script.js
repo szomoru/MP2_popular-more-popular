@@ -1,6 +1,6 @@
-var searchVolumeArray = [25, 56, 89, 24, 65, 687, 357, 367, 687, 123, 74354, 45, 68, 72, 732, 7423, 682, 98, 426, 3247]
-var newGameArray = [];
-var winnerName, userAnswer;
+const searchVolumeArray = [25, 56, 89, 24, 65, 687, 357, 367, 687, 123, 74354, 45, 68, 72, 732, 7423, 682, 98, 426, 3247]
+let newGameArray = [];
+let winnerName, userAnswer;
 
 document.addEventListener("DOMContentLoaded", function () {
    /* --- check if everything is loaded and listen if the Start New Game button is clicked ---*/
@@ -64,6 +64,9 @@ function createQuestionCard(user) {
 }
 
 function updateGameArea() {
+   document.getElementById("comp-section-left").style.pointerEvents = 'auto';
+   document.getElementById("comp-section-right").style.pointerEvents = 'auto';
+   resetLayer();
    console.log("The number of the question is: " + incrementNrOfQuestion());
    if (nrOfQuestion == 11) {
       endGame();
@@ -100,12 +103,14 @@ function calculateCorrectAnswer() {
 }
 
 function userAnswerLeft() {
+   document.getElementById("comp-section-left").style.pointerEvents = 'none';
    userAnswer = newGameArray[nrOfQuestion - 1][0].name;
    console.log("The selected user answer: " + userAnswer);
    checkAnswer();
 }
 
 function userAnswerRight() {
+   document.getElementById("comp-section-right").style.pointerEvents = 'none';
    userAnswer = newGameArray[nrOfQuestion - 1][1].name;
    console.log("The selected user answer: " + userAnswer);
    checkAnswer();
@@ -113,13 +118,27 @@ function userAnswerRight() {
 
 function checkAnswer() {
    if (userAnswer == winnerName) {
-
       incrementScoreCorrect();
-      updateGameArea();
+      if (userAnswer == document.getElementById("compImgLeft").getAttribute("alt")) {
+         $("#layerL").removeClass("layer-left");
+         $("#layerL").addClass("layer-correct");
+      } else if (userAnswer == document.getElementById("compImgRight").getAttribute("alt")){
+         $("#layerR").removeClass("layer-right");
+         $("#layerR").addClass("layer-correct");
+      }
+      setTimeout(updateGameArea, 200);
+      
    } else if (userAnswer != winnerName) {
-
+      
       incrementScoreWrong();
-      updateGameArea();
+      if (userAnswer == document.getElementById("compImgLeft").getAttribute("alt")) {
+         $("#layerL").removeClass("layer-left");
+         $("#layerL").addClass("layer-wrong");
+      } else if (userAnswer == document.getElementById("compImgRight").getAttribute("alt")){
+         $("#layerR").removeClass("layer-right");
+         $("#layerR").addClass("layer-wrong");
+      }
+      setTimeout(updateGameArea, 200);
    }
 }
 
@@ -149,17 +168,37 @@ function endGame() {
       /*alert("CONGRATULATION YOU ARE THE ABSOLUTE WINNER!!! :)");*/
       let modal = document.getElementById("modalWinner");
       modal.style.display = "block";
+      document.getElementById("modalCloseWinner").addEventListener("click", function(){
+         modal.style.display = "none";
+         newGame();
+      });
    } else {
       let modal = document.getElementById("modalLoser");
       modal.style.display = "block";
-      /*alert("SORRY DUDE! YOU WILL HAVE BETTER LUCK NEXT TIME! :(");*/
+      document.getElementById("modalCloseLoser").addEventListener("click", function(){
+         modal.style.display = "none";
+         newGame();
+      });
    }
 }
 
-function closeModal(event) {
-   modal.style.display = "none";
-}
+function resetLayer() {
+   if (document.getElementById("layerL").getAttribute("class") == "layer-wrong")  {
+      $("#layerL").removeClass("layer-wrong");
+      $("#layerL").addClass("layer-left");
+   } else if (document.getElementById("layerL").getAttribute("class") == "layer-correct") {
+      $("#layerL").removeClass("layer-correct");
+      $("#layerL").addClass("layer-left");
+   }
 
+   if (document.getElementById("layerR").getAttribute("class") == "layer-wrong")  {
+      $("#layerR").removeClass("layer-wrong");
+      $("#layerR").addClass("layer-right");
+   } else if (document.getElementById("layerR").getAttribute("class") == "layer-correct") {
+      $("#layerR").removeClass("layer-correct");
+      $("#layerR").addClass("layer-right");
+   }
+}
 
 
 /*
