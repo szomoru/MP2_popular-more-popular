@@ -234,8 +234,8 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(56, 142, 60, .3);
-    z-index: 2;
+    background-color: rgb(56, 142, 60, .5);
+    z-index: 100;
 }
 
 .layer-wrong {
@@ -244,8 +244,8 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(229, 57, 53, .3);
-    z-index: 2;
+    background-color: rgb(229, 57, 53, .5);
+    z-index: 100;
 }
 
 .btn-start {
@@ -320,7 +320,6 @@ img {
     transition: all .2s ease-in-out;
 }
 
-}
 .blink {
   -webkit-animation: blink 0.2s linear infinite;
   -moz-animation: blink 0.2s linear infinite;
@@ -358,9 +357,10 @@ img {
 
 .score-panel {
     display: flex;
-    flex-direction: column;
-    justify-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: 1.5rem;
     /*border: solid 3px #bc5100;*/
@@ -373,7 +373,7 @@ img {
 
 .score-panel p {
     font-size: 1rem;
-    padding: .25rem 1rem;
+    padding: .5rem 2rem;
     margin-top: 10px;
     border-radius: 1.5rem;
     background-color: #e0e0e0;
@@ -383,11 +383,11 @@ img {
 }
 
 .correctAnswer span {
-    color: #64dd17;
+    color: #388e3c;
 }
 
 .wrongAnswer span {
-    color: #ff6434;
+    color: #d32f2f;
 }
 
 
@@ -493,6 +493,13 @@ iframe element.style {
     z-index: 2;
 }
 
+.close:hover,
+.close:focus {
+  color: #bc5100;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 /* ---------- Contact Form ----------*/
 
@@ -584,6 +591,16 @@ iframe element.style {
     .navbar p {
         display: none;
     }
+
+    .comp-item-1 {
+        width: 50%;
+        height: auto;
+    }
+
+    .comp-item-2 {
+        width: 50%;
+        height: auto;
+    }
 }
 
 
@@ -593,13 +610,13 @@ iframe element.style {
     };
 }*/
 
-@media screen and (max-width: 640px) {
-    .comp-section {
+@media screen and (max-width: 812px) {
+    /*.comp-section {
         flex-direction: column;
-    }
+    }*/
 
     
-    .comp-item-2,
+    /*.comp-item-2,
     .comp-item-1 {
         flex-direction: column;
         align-items: center;
@@ -615,9 +632,18 @@ iframe element.style {
 
     .comp-item-2 {
         border-left: solid 5px transparent;
+    }*/
+
+    .comp-title h3 {
+        display: none;
+    }
+
+    .info-panel p {
+        display: none;
     }
 
 
+    
 }
 
 
@@ -631,8 +657,8 @@ iframe element.style {
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 60vw; /* Full width */
+    height: auto; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -640,34 +666,28 @@ iframe element.style {
   
   /* Modal Content */
   .modal-content {
-    
     margin: auto;
-    padding: 20px;
-    
-    border-radius: 2rem;
-    width: 50%;
-  }
-
-  #modalLoser .modal-content {
-    background-color:rgb(255, 205, 210, 0.85);
-  }
-
-  #modalWinner .modal-content {
-    background-color: rgb(200, 230, 201, 0.85);
+    padding: 2rem;
+    background-color:rgb(224, 224, 224);
+    border-radius: 1rem;
+    width: fit-content;
   }
 
   #modalLoser h1 {
-    font-size: 1.2rem;
-    color: red;
+    font-size: 2rem;
+    color: #d32f2f;
   }
 
   #modalWinner h1 {
-    font-size: 1.2rem;
-    color: green;
+    
+    font-size: 2rem;
+    color: #388e3c;
   }
 
-  .modalButtons button {
-      width: fit-content;
-      background-color: #ab000d;
-      color:#e0e0e0;
+
+  .close {
+    padding: 1.2rem;
+    color: #c49000;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
