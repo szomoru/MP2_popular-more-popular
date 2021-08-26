@@ -42,7 +42,7 @@
 
     <div class="comp-section">
       <div id="comp-section-left" onclick="userAnswerLeft()" class="comp-item-1">
-        <div class="layer-left"></div>
+        <div id="layerL" class="layer-left"></div>
         <img id="compImgLeft" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
         <div id="infoSectLeft" class="info-panel">
           <p class="name"><strong>Name: </strong></p>
@@ -54,7 +54,7 @@
        </div>
 
       <div id="comp-section-right" onclick="userAnswerRight()" class="comp-item-2">
-        <div class="layer-right"></div>
+        <div id="layerR" class="layer-right"></div>
         <img id="compImgRight" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
         <div id="infoSectRight" class="info-panel">
           <p class="name"><strong>Name: </strong></p>
@@ -76,25 +76,19 @@
      </div>
 
     <div id="modalWinner" class="modal">
-      <!-- Modal content -->
       <div class="modal-content">
         <h1>CONGRATULATIONS!</h1>
-        <div class="modalButtons">
-          <button class="btn center-block btn-form">Close</button>
-        </div>
+        <span id="modalCloseWinner" class="close">Back to game</span>
       </div>
     </div>
+  
 
     <div id="modalLoser" class="modal">
-      <!-- Modal content -->
       <div class="modal-content">
         <h1>BAD LUCK! Maybe next time ...</h1>
-        <div class="modalButtons">
-          <button onclick="closeModal()" class="btn center-block btn-form">Close</button>
-        </div>
+        <span id="modalCloseLoser" class="close">Back to game</span>
       </div>
     </div>
-
   </div>
         
         
