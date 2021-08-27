@@ -138,9 +138,7 @@ header {
 /* ---- GAME SECTION ----- */
 
 .main-section {
-    display: flex;
     
-    justify-content: space-evenly;
     margin: 0;
     /*border: solid 3px #ffffff;*/
     border-radius: 10px;
@@ -151,6 +149,8 @@ header {
 }
 
 .game-section {
+    display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 
@@ -480,12 +480,16 @@ iframe element.style {
     transform: scale(1.02);
 }
 
+.grow-card:hover {
+    transform: scale(1.5);
+}
+
 .layer-left:hover {
     background-color: rgb(255, 176, 76, .3);
     z-index: 2;
-    -webkit-animation: blink 1s linear infinite;
+    /*-webkit-animation: blink 1s linear infinite;
     -moz-animation: blink 1s linear infinite;
-    animation: blink 1s linear infinite;
+    animation: blink 1s linear infinite;*/
 }
 
 .layer-right:hover {
@@ -519,6 +523,8 @@ iframe element.style {
 }
 
 .contact-section {
+    display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
 }
@@ -644,6 +650,30 @@ iframe element.style {
 
 
     
+}
+
+/* ----------------  ABOUT ---------------*/
+
+.ms-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-steps {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    margin: 2rem;
+}
+
+.grow-card {
+    transition: all .5s ease-in-out;
 }
 
 
