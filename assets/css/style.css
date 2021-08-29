@@ -358,7 +358,7 @@ img {
 .score-panel {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
@@ -374,7 +374,7 @@ img {
 .score-panel p {
     font-size: 1rem;
     padding: .5rem 2rem;
-    margin-top: 10px;
+    margin: 10px;
     border-radius: 1.5rem;
     background-color: #e0e0e0;
     color: #424242;
@@ -382,11 +382,11 @@ img {
     min-width: fit-content;
 }
 
-.correctAnswer span {
+#correctAnswer {
     color: #388e3c;
 }
 
-.wrongAnswer span {
+#wrongAnswer {
     color: #d32f2f;
 }
 
@@ -676,6 +676,22 @@ iframe element.style {
     transition: all .5s ease-in-out;
 }
 
+.about-text {
+    margin: 2rem 4rem;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.about-text a {
+    text-decoration: none;
+    color: #f57f17;
+}
+
+.aboutGameList {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
 
 /* ----------------- MODAL ----------------*/
 
@@ -687,7 +703,7 @@ iframe element.style {
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 60vw; /* Full width */
+    width: 100%; /* Full width */
     height: auto; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
