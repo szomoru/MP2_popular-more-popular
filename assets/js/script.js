@@ -1,4 +1,5 @@
-const searchVolumeArray = [25, 56, 89, 24, 65, 687, 357, 367, 687, 123, 74354, 45, 68, 72, 732, 7423, 682, 98, 426, 3247]
+let searchVolumeArray = [];
+
 let newGameArray = [];
 let winnerName, userAnswer;
 
@@ -6,6 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
    /* --- check if everything is loaded and listen if the Start New Game button is clicked ---*/
    document.getElementById("startBtn").addEventListener("click", newGame);
 })
+
+function fillSearchVolumeArray() {
+   for (let i = 0; i < 20; i++) {
+      searchVolumeArray.push(Math.floor(Math.random()*1E6));
+   }
+   console.log(searchVolumeArray);
+}
 
 function addSearchVolume() {
    /* --- Fill up the search Volume object value in the Database array ---*/
@@ -20,6 +28,7 @@ function newGame() {
    document.getElementById("questionNumber").innerText = 0;
    document.getElementById("correctAnswer").innerText = 0;
    document.getElementById("wrongAnswer").innerText = 0;
+   fillSearchVolumeArray();
    addSearchVolume(); /* --- calling addSearchVolume function ---*/
    shuffleArray(); /* --- calling shuffleArray function ---*/
    newGameArray = new Array; /* --- define the array as new that will contain the comp pairs from the shuffled array. by defining as new array makes it happen that every time when the user clicks (Start game button the game array brand new) ---*/
