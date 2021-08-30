@@ -173,10 +173,15 @@ function incrementScoreWrong() {
 }
 
 function endGame() {
-   if (document.getElementById("correctAnswer").innerText > document.getElementById("wrongAnswer").innerText) {
-      /*alert("CONGRATULATION YOU ARE THE ABSOLUTE WINNER!!! :)");*/
+   if (document.getElementById("correctAnswer").innerText >= document.getElementById("wrongAnswer").innerText) {
       let modal = document.getElementById("modalWinner");
       modal.style.display = "block";
+      let finalCorrectAnswer = document.getElementById("correctAnswer").innerText;
+      console.log(finalCorrectAnswer);
+      document.getElementById("modalCorrectAnswerWinner").innerText = finalCorrectAnswer;
+      let finalWrongAnswer = parseInt(document.getElementById("wrongAnswer").innerText);
+      console.log(finalWrongAnswer);
+      document.getElementById("modalWrongAnswerWinner").innerText = finalWrongAnswer;
       document.getElementById("modalCloseWinner").addEventListener("click", function(){
          modal.style.display = "none";
          newGame();
@@ -184,6 +189,12 @@ function endGame() {
    } else {
       let modal = document.getElementById("modalLoser");
       modal.style.display = "block";
+      let finalCorrectAnswer = document.getElementById("correctAnswer").innerText;
+      console.log(finalCorrectAnswer);
+      document.getElementById("modalCorrectAnswerLoser").innerText = finalCorrectAnswer;
+      let finalWrongAnswer = parseInt(document.getElementById("wrongAnswer").innerText);
+      console.log(finalWrongAnswer);
+      document.getElementById("modalWrongAnswerLoser").innerText = finalWrongAnswer;
       document.getElementById("modalCloseLoser").addEventListener("click", function(){
          modal.style.display = "none";
          newGame();
