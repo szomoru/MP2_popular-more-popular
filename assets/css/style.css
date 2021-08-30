@@ -51,7 +51,7 @@ header {
 }
 
 #lp-title {
-    margin: 3rem 0;       
+    margin: 3rem 0;
 }
 
 #lp-title h1 {
@@ -70,21 +70,21 @@ header {
 }
 
 .lp-text h2 {
-    color:#ffffff;
+    color: #ffffff;
     letter-spacing: 0.2rem;
-    line-height: 2rem; 
+    line-height: 2rem;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
 }
 
 .lp-text i {
-    color:#f57f17;
+    color: #f57f17;
     font-size: 3rem;
     margin: 10px;
 }
 
 .lp-text h3 {
-    margin-top: 5rem;    
+    margin-top: 5rem;
     font-size: 1.5rem;
     font-family: 'Fredoka One', cursive;
 }
@@ -99,23 +99,18 @@ header {
 }
 
 #lp-footer {
-    margin:1rem;
-    padding:1.5rem;
+    margin: 1rem;
+    padding: 1.5rem;
 }
 
-#lp-footer p{
+#lp-footer p {
     font-family: 'Montserrat', sans-serif;
     color: #e0e0e0;
     font-size: 0.5rem;
     text-align: center;
 }
 
-
 /* ----- HEADER Format -----*/
-
-/*header {
-    margin: 2rem;
-}*/
 
 .row {
     margin: 0;
@@ -133,17 +128,13 @@ header {
     box-shadow: 5px 5px #ffb04c;
 }
 
-
-
 /* ---- GAME SECTION ----- */
 
 .main-section {
-    
     margin: 0;
-    /*border: solid 3px #ffffff;*/
     border-radius: 10px;
     box-shadow: 5px 5px #6d6d6d;
-    background-color: #e0e0e0 ;
+    background-color: #e0e0e0;
     text-align: center;
     max-height: max-content;
 }
@@ -153,8 +144,6 @@ header {
     justify-content: space-evenly;
     flex-direction: column;
 }
-
-
 
 /* ---------- Comparisation section ---------- */
 
@@ -174,8 +163,8 @@ header {
 .comp-item-2 {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center;   
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 0;
     position: relative;
@@ -190,14 +179,12 @@ header {
     border-right: solid 5px transparent;
 }
 
-
-
 .comp-title {
     text-align: center;
 }
 
 .comp-title h3 {
-    color:#ab000d;
+    color: #ab000d;
     font-size: 2em;
     padding: 1.5rem;
 }
@@ -222,11 +209,19 @@ header {
     z-index: 2;
 }
 
-@keyframes layer-right{
-    0%{opacity: 0;}
-    50%{opacity: .5;}
-    100%{opacity: 1;}
+@keyframes layer-right {
+    0% {
+        opacity: 0;
     }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 .layer-correct {
     position: absolute;
@@ -257,7 +252,6 @@ header {
     letter-spacing: 1.2px;
     color: #e0e0e0;
     background-color: #ab000d;
-
 }
 
 .btn-start:focus {
@@ -273,42 +267,34 @@ header {
     transition: all 0.5s;
 }
 
-/* .comp-image {
-    margin: 0;
-    border: solid 3px #ffffff;
-    border-radius: 50%;
-    width: 35%;
-}*/
-
 img {
     max-width: 100%;
     height: auto;
     opacity: 0.9;
-  }
+}
 
-  .info-panel {
-    /*border: solid 3px #ffffff;*/
+.info-panel {
     background-color: #bdbdbd;
     width: 100%;
-  }
+}
 
-    .info-panel p {
-        margin: 0;
-        padding: 0.2rem
-    }
+.info-panel p {
+    margin: 0;
+    padding: 0.2rem
+}
 
 .btn-img-container {
     position: relative;
     max-width: 100%;
     height: auto;
-  }
+}
 
 .btn-container {
     position: absolute;
     display: flex;
     flex-direction: row;
     bottom: 10px;
-    right:10px;
+    right: 10px;
     padding: 1.2rem;
     background-color: rgb(255, 255, 255, 0.75);
     border-radius: .5rem;
@@ -321,10 +307,10 @@ img {
 }
 
 .blink {
-  -webkit-animation: blink 0.2s linear infinite;
-  -moz-animation: blink 0.2s linear infinite;
-  animation: blink 0.2s linear infinite;
-} 
+    -webkit-animation: blink 0.2s linear infinite;
+    -moz-animation: blink 0.2s linear infinite;
+    animation: blink 0.2s linear infinite;
+}
 
 .btn-container .btn {
     max-width: 50%;
@@ -335,18 +321,17 @@ img {
 .btn-img-container .btn-up {
     color: #76d275;
     background-color: #00701a;
-  }
+}
 
 .btn-img-container .btn-down {
     color: #ff6f60;
     background-color: #ab000d;
-  }
+}
 
 .btn-format {
     font-size: 24px;
     margin: 0.1rem;
     border: none;
-
 }
 
 /* ---------- Score Panel ---------- */
@@ -363,11 +348,10 @@ img {
     flex-wrap: wrap;
     margin: 0;
     padding: 1.5rem;
-    /*border: solid 3px #bc5100;*/
     border-radius: 0 0 10px 10px;
     background-color: #bf360c;
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     font-weight: 800;
 }
 
@@ -382,33 +366,16 @@ img {
     min-width: fit-content;
 }
 
+#modalCorrectAnswerWinner,
+#modalCorrectAnswerLoser,
 #correctAnswer {
     color: #388e3c;
 }
 
+#modalWrongAnswerWinner,
+#modalWrongAnswerLoser,
 #wrongAnswer {
     color: #d32f2f;
-}
-
-
-/* ----------- Trend Panel ----------- */
-
-.trend-section {
-    margin: 0;
-    /*border: solid 3px #ffffff;*/
-    border-radius: 10px;
-    box-shadow: 5px 5px #6d6d6d;
-    background-color: #e0e0e0 ;
-    text-align: center;
-}
-
-iframe {
-    width: 80%;
-}
-
-iframe element.style {
-    height: 80%;
-    border-radius: 10px;
 }
 
 /* ---------- NAVBAR ---------- */
@@ -447,7 +414,7 @@ iframe element.style {
 }
 
 .active {
-     color: #f57f17 !important;
+    color: #f57f17 !important;
 }
 
 /* ----- HOVER -----*/
@@ -481,15 +448,12 @@ iframe element.style {
 }
 
 .grow-card:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .layer-left:hover {
     background-color: rgb(255, 176, 76, .3);
     z-index: 2;
-    /*-webkit-animation: blink 1s linear infinite;
-    -moz-animation: blink 1s linear infinite;
-    animation: blink 1s linear infinite;*/
 }
 
 .layer-right:hover {
@@ -499,9 +463,9 @@ iframe element.style {
 
 .close:hover,
 .close:focus {
-  color: #bc5100;
-  text-decoration: none;
-  cursor: pointer;
+    color: #bc5100;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -513,13 +477,14 @@ iframe element.style {
     text-align: right;
 }
 
-.center-form h1, i {
+.center-form h1,
+i {
     color: #f57f17;
 }
 
 
 .btn-form {
-  margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 .contact-section {
@@ -529,7 +494,7 @@ iframe element.style {
     flex-wrap: wrap;
 }
 
-.main-section h3{
+.main-section h3 {
     margin: 2rem;
     color: #ab000d;
 
@@ -590,7 +555,7 @@ iframe element.style {
         flex-direction: column;
     }
 
-}   
+}
 
 @media screen and (max-width: 376px) {
 
@@ -617,39 +582,12 @@ iframe element.style {
 }*/
 
 @media screen and (max-width: 812px) {
-    /*.comp-section {
-        flex-direction: column;
-    }*/
-
-    
-    /*.comp-item-2,
-    .comp-item-1 {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.5rem;
-        position: relative;
-        z-index: 1;
-    }
-
-    .comp-item-1 {
-        border-right: solid 5px transparent;
-    }
-
-    .comp-item-2 {
-        border-left: solid 5px transparent;
-    }*/
-
     .comp-title h3 {
         display: none;
     }
-
     .info-panel p {
         display: none;
     }
-
-
-    
 }
 
 /* ----------------  ABOUT ---------------*/
@@ -680,7 +618,6 @@ iframe element.style {
     margin: 2rem 4rem;
     text-align: center;
     font-weight: 600;
-
 }
 
 .about-text a {
@@ -697,43 +634,50 @@ iframe element.style {
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 10; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 10;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: auto; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
     margin: auto;
     padding: 2rem;
-    background-color:rgb(224, 224, 224);
+    background-color: rgb(224, 224, 224);
     border-radius: 1rem;
     width: fit-content;
-  }
+}
 
-  #modalLoser h1 {
+#modalLoser h1 {
     font-size: 2rem;
     color: #d32f2f;
-  }
+}
 
-  #modalWinner h1 {
-    
+#modalWinner h1 {
     font-size: 2rem;
     color: #388e3c;
-  }
+}
 
-
-  .close {
+.close {
     padding: 1.2rem;
     color: #c49000;
     font-size: 1.5rem;
     font-weight: bold;
-  }
+}
