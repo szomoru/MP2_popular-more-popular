@@ -366,15 +366,13 @@ img {
     min-width: fit-content;
 }
 
-#modalCorrectAnswerWinner,
-#modalCorrectAnswerLoser,
-#correctAnswer {
+
+.correctAnswer {
     color: #388e3c;
 }
 
-#modalWrongAnswerWinner,
-#modalWrongAnswerLoser,
-#wrongAnswer {
+
+.wrongAnswer {
     color: #d32f2f;
 }
 
@@ -667,12 +665,12 @@ i {
 
 #modalLoser h1 {
     font-size: 2rem;
-    color: #d32f2f;
+    /*color: #d32f2f;*/
 }
 
 #modalWinner h1 {
     font-size: 2rem;
-    color: #388e3c;
+    /*color: #388e3c;*/
 }
 
 .close {

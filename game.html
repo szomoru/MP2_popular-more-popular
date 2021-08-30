@@ -77,9 +77,14 @@
 
     <div id="modalWinner" class="modal">
       <div class="modal-content">
-        <h1>CONGRATULATIONS!</h1>
-        <p>Correct Answer(s): <span id="modalCorrectAnswerWinner">0</span></p>
-        <p>Wrong Answer(s): <span id="modalWrongAnswerWinner">0</span></p>
+        <br>
+        <i class="fas fa-smile fa-3x correctAnswer"></i>
+        <br>
+        <h1 class="correctAnswer">CONGRATULATIONS!</h1>
+        <h1>You had more or equal <span class="correctAnswer">GOOD</span> answers than <span class="wrongAnswer">WRONG</span></h1>
+        <br>
+        <p>Correct Answer(s): <span class="correctAnswer" id="modalCorrectAnswerWinner">0</span></p>
+        <p>Wrong Answer(s): <span class="wrongAnswer" id="modalWrongAnswerWinner">0</span></p>
         <span id="modalCloseWinner" class="close">Back to game</span>
       </div>
     </div>
@@ -87,9 +92,14 @@
 
     <div id="modalLoser" class="modal">
       <div class="modal-content">
-        <h1>BAD LUCK! Maybe next time ...</h1>
-        <p>Correct Answer(s): <span id="modalCorrectAnswerLoser">0</span></p>
-        <p>Wrong Answer(s): <span id="modalWrongAnswerLoser">0</span></p>
+        <br>
+        <i class="fas fa-frown fa-3x wrongAnswer"></i> 
+        <br>
+        <h1 class="wrongAnswer">Ahhhh ...!</h1>  
+        <h1>You had more <span class="wrongAnswer">WRONG</span> answers than <span class="correctAnswer">GOOD</span>! Maybe next time ...</h1>
+        <br>
+        <p>Correct Answer(s): <span class="correctAnswer" id="modalCorrectAnswerLoser">0</span></p>
+        <p>Wrong Answer(s): <span class="wrongAnswer" id="modalWrongAnswerLoser">0</span></p>
         <span id="modalCloseLoser" class="close">Back to game</span>
       </div>
     </div>
