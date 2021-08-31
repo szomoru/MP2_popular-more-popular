@@ -44,7 +44,7 @@ The pairs are created randomly in each game. The dynamic of the game is given th
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, I want to see that the gam,e is dynamic. So the comparization pairs are not repeated or if they are repeated the result is not necessarily the same.
+        1. As a Returning Visitor, I want to see that the game is dynamic. So the comparization pairs are not repeated or if they are repeated the result is not necessarily the same.
         2. As a Returning Visitor, I want to see a contact form where i can ask questions or share my thoughts and comments.
         3. As a Returning Visitor, I want to find community links.
 
@@ -73,7 +73,7 @@ The pairs are created randomly in each game. The dynamic of the game is given th
     -   #### Imagery
         -   Since the main topic of this website is to focus on images and comparing them, i wanted to keep the surroundings without any picture. I wanted to keep it neutral for the visitor to keep a good focus on the images for comparisation.
 
-*   ### Wireframes
+-   ### Wireframes
 
     -   There were several design changes during the development process, but the final site looks very similar with the wirframe. 
 
@@ -186,3 +186,60 @@ The pairs are created randomly in each game. The dynamic of the game is given th
     - Adobe XD free version was used to create [wireframes](./assets/wireframes/) during the design process.
 1. [Beautify:]
     - To beautify my codes i have used the Bootstrap inbuilt beautify feature and Format Document feature.
+
+
+## Testing
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+
+    -   index.html                PASSED    [Result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fszomoru.github.io%2FMP1-Bodyweight%2Findex.html)
+    -   about.html                 PASSED    [Result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fszomoru.github.io%2FMP1-Bodyweight%2Fhome.html)
+    -   game.html             PASSED    [Result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fszomoru.github.io%2FMP1-Bodyweight%2Fbenefits.html)
+    -   contact.html            PASSED    [Result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fszomoru.github.io%2FMP1-Bodyweight%2Fexercises.html)
+
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+
+    -   style.css                 PASSED 
+        
+    :point_right: <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+    </a> :point_left: Results
+
+### Testing User Stories from User Experience (UX) Section
+
+-   #### First Time Visitor Goals
+
+    1. As a First Time Visitor, I want to easily understand the content of the webpage and the game rules. I also would like to make a fast decision if this website interesting for me enough.
+        1. Entering to the page the visitor faces with Landing page where she/he can see text which already foreshadow the topic of the website. 
+        2. With the "Let's play" button the visitor is called to action and this point she/he already knows that there is something fun and enjoyable waiting for her/him inside. 
+    
+    2. As a First Time Visitor, I want to be able to easily navigate through the site and get an overal picture about the site structure.
+        1. After entering to the about page the visitor faces a well structured page. The structure of the page is the same as the rest of the site. With this the visitor does not have to facing different layouts and figure out what to do next. On the about page it is not only the strucutre what the visitor meets she/he gets an introduction to about the game as well.
+        2. The navigation is located in the header section on all pages and the actual page is always highlighted. So the visitor always know where she/he is on the site.
+    
+    3. As a First Time Visitor, I want to see their social media availability, where i can get more information about the site or organisation / person behind that.
+        1. Social media links are located on the Contact page. The visitor always has the possibility to visit these links and start to follow the website owner.
+        2. The visitor always has the possibility to contact to the website owner and asking question through the contact form on the Contact page
+
+    
+    4. As a first Time Visitor i want to find the possibility how to contact the person or organization behind the site. 
+        1.  The Visitor has the possibility to follow the website owner on any of the shared social media link and get automatic updates about the progress for the future. 
+        2.   The Visitor always has the possibility to Contact the website owner and ask any question through the Contact form on the Contact page  
+
+
+-   #### Returning Visitor Goals
+
+    1. As a Returning Visitor, I want to see that the game is dynamic. So the comparization pairs are not repeated or if they are repeated the result is not necessarily the same.
+        1. The comparization pairs are created randomly and an algorythm makes sure that the pairs are not repeated. This happens due that the database elements are shuffled by Fisher - Yates algorithm.
+        2. The comparisation based on the last 30 days search volume for the "keywords(name)" globally. Depends on the peoples interest this can vary from period to period. 
+
+    2. As a Returning Visitor, I want to see a contact form where i can ask questions or share my thoughts and comments.
+        1.  This Contact form is clearly visible and accessable on the Contact page on any of the screen sizes and platforms
+        2.  All the contact references are centralized on the Contact page. This comntains the social media links and contact form as well. The reason behind that is we do not want to steal the focus of the visitor from the game. If the visitor wants to contact to the website owner he can easily do that through the contact page, where all the possible contact references are available.
+    
+    3. As a Returning Visitor, I want to find community links.
+        -  The community links can be found on the Contact page.
