@@ -7,10 +7,8 @@
  
  ## About
 
-This website is a game website. The idea is comming from my 12years old son, who likes playing with the Higher or Lower game.   
-
- 
-
+This website is a gaming website. The idea is comming from my 13 years old son, who likes playing with the Higher or Lower game. The target audience for this website is everyone who is interested in famous people and likes guessing. This website is not only about celebs it is about scientists historical people actresses and actors, musicians, novellists, so about everyone. If someone would like to know more any of the persons each of them has a link to her/his wikipedia page. 
+The pairs are created randomly in each game. The dynamic of the game is given that the interest of the people changes all the time. Sometimes someone is more popular than the other, but the next period it can be total opposite. The comparisation supposed to happen based on the last 30 days search volume for the person name. 
 
 ## Table of Contents
 
@@ -19,6 +17,8 @@ This website is a game website. The idea is comming from my 12years old son, who
 [Features](#features)
 
 [Technologies Used](#technologies)
+
+[JavaScripts](#scripts)
 
 [Testing](#testing)
 
@@ -75,21 +75,21 @@ This website is a game website. The idea is comming from my 12years old son, who
 
 *   ### Wireframes
 
-    -   There were several design change during the development process, but the final site looks very familiar with the wirframe. 
+    -   There were several design changes during the development process, but the final site looks very similar with the wirframe. 
 
-    -   Mobile Wireframe - [View](./assets/wireframes/)
+    -   Mobile Wireframe - [View](./assets/wireframes/Wireframe_Iphone_X_MP2.pdf)
 
-        <img src="./assets/img/readme/.PNG" height="400px" />
-
-
-    -   Ipad Pro Wireframe - [View](./assets/wireframes/)
-
-        <img src="./assets/img/readme/.PNG" height="400px" />
+        <img src="./assets/img/readme/wireframe_iphonex_mp2.PNG" height="400px" />
 
 
-    -   Desktop Wireframe - [View](./assets/wireframes/)
+    -   Ipad Pro Wireframe - [View](./assets/wireframes/Wireframe_IpadPro_MP2.pdf)
 
-        <img src="./assets/img/readme/.PNG" height="400px" />
+        <img src="./assets/img/readme/wireframe_ipadpro_mp2.PNG" height="400px" />
+
+
+    -   Desktop Wireframe - [View](./assets/wireframes/Wireframe_Desktop_MP2.pdf)
+
+        <img src="./assets/img/readme/wireframe_desktop_mp2.PNG" height="400px" />
 
     ## Features
 
@@ -130,7 +130,7 @@ This website is a game website. The idea is comming from my 12years old son, who
         - "Start New Game" button, which can be a pushed anytime during the game
         - Score area where the visitor can follow up how many question is used from the total 10 questions and also how many correct and wrong answer has the visitor.
         
-        At the end of the game (after answering the 10th question), there are 2 modals can be shown:
+        At the end of the game (after answering all the 10 questions), there are 2 modals which can be shown:
         - "Winner" modal:
             This modal is shown if the number of the correct answers larger or equal than the number of the wrong answers. 
         - "Loser" modal: 
@@ -145,15 +145,15 @@ This website is a game website. The idea is comming from my 12years old son, who
          - phone number
          - social media links
          of the developer. 
-        - right section contins a contact form, where the visitor can leave her/his name/e-mail and the message.
+        - right section contains a contact form, where the visitor can leave her/his name/e-mail and the message.
          this feature is fully set up through the email.js website 
         
 
     ### Future Features
-    This website and game is full of potential for future develpments and adding new features. Here are some possible future developments:
+    This website and game is full of possibilities for future develpments and adding new features. Here are some possible future developments:
     - Adding a feature where the visitor can define the number of the questions her-/himself. 
-    - Separate page with a form to uploding data into the database.
-    - After a certain number of the database it makes sense to have the possibility to play games based on professions of people.  
+    - Separate page with a form to uploading data into the database.
+    - After a certain number of the database it makes sense to have the possibility to play games based on professions or sex or origin of people.  
 
 
 <a name="technologies"></a>
