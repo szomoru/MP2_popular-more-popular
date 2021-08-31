@@ -165,3 +165,24 @@ This website is a game website. The idea is comming from my 12years old son, who
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JavaScript] (https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries & Programs Used
+
+1. [Bootstrap 4.1.3:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    - Bootstrap was used to assist with the responsiveness and styling of the website.
+1. [Hover.css:](https://ianlunn.github.io/Hover/)
+    - Hover.css was used on the Social Media icons in the footer and on all cards and menu items to highlight and scale while being hovered over them.
+1. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used to import the 'Fredoka' and 'Montserrat' fonts into the style.css file which is used on all pages throughout the project.
+1. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+1. [jQuery:](https://jquery.com/)
+    - jQuery came with Bootstrap 
+1. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+1. [Adobe XD:](https://www.adobe.com/se/products/xd.html)
+    - Adobe XD free version was used to create [wireframes](./assets/wireframes/) during the design process.
+1. [Beautify:]
+    - To beautify my codes i have used the Bootstrap inbuilt beautify feature and Format Document feature.
