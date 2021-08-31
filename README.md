@@ -50,7 +50,7 @@ The pairs are created randomly in each game. The dynamic of the game is given th
 
     -   #### Frequent User Goals
         1. As a Frequent User, I want to see if there are more type of games or more versions of the existing one.
-        2. As a Frequent User, I want to sign up to a Newsletter so never miss any updates or news about the website and the topic.
+        2. As a Frequent User, I want to follow the future developments and updates about the website and the topic.
 
 -   ### Design
 
@@ -243,3 +243,26 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
     
     3. As a Returning Visitor, I want to find community links.
         -  The community links can be found on the Contact page.
+
+-   #### Frequent User Goals
+
+    1. As a Frequent User, I want to see if there are more type of games or more versions of the existing one.
+        1.  The development of the game is definietaly planned. The database is also updated regularly. The databese gets bigger and bigger. If the frequent user starts to follow the website owner on any of the given social media links, the visitor never will miss an update. All the future updates are going to be shared on social media sites, ther wont be separate mailings about that. That possibility can be added when membership possibility will be available for the site.
+
+    2. As a Frequent User, I want to follow the future developments and updates about the website and the topic.
+        1.  There are all the possible contact references on the contact page. It includes the social media links, where all the the future developments will be published.
+        2.  If the user has a request to discuss a special topic it is possible to contact through a contact form on the Contact page.
+
+### Further Testing
+
+-   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge browsers.
+-   The website was viewed on a variety of devices such as Desktop, Laptop, iPhoneSE, iPhone 6 & iPhone 11 Pro.
+-   A large amount of testing was done to ensure that all pages were linking correctly.
+-   Family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+### Functional Testing
+-   During the development process and after that there were several tests carried out to validate the links. All external and internal links were tested several times.
+
+### Known Bugs
+
+-   On some mobile devices the Landing page text box not shrinking enough.
