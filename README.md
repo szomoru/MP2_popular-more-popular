@@ -1,104 +1,74 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">Popular More Popular</h1>
+<h1 align="center"><img src="./assets/img/readme/responsive.JPG" /></h1>
 
-Welcome szomoru,
+:point_right: <a href="#">Live Website</a> :point_left:
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+:point_right: <a href="https://github.com/szomoru/MP2_popular-more-popular">Github Repository</a> :point_left:
+ 
+ ## About
 
-## Gitpod Reminders
+This website is a game website. The idea is comming from my 12years old son, who likes playing with the Higher or Lower game. This game  
+There are tons of workout programs and personal trainers on the net, but there are still people who are struggling how start to work on a better themself. Sometimes people over mistify what they have to do and do not think about the simpliest, fastest solution. This website has been created to show those people that they do not need much to start to live a healthier life, specially when comes to the training. They do not need expensive gym subscription or personal trainers. They need just their Body. The goal of this website is to introduce the basic bodyweight exercises and answer some frequently asked questions. This website enjoyable on every device, so it is easy to acces in all circumstances.
+ 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Table of Contents
 
-A blue button should appear to click: _Make Public_,
+[User Experience (UX)](#UX)
 
-Another blue button should appear to click: _Open Browser_.
+[Features](#features)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Technologies Used](#technologies)
 
-A blue button should appear to click: _Make Public_,
+[Testing](#testing)
 
-Another blue button should appear to click: _Open Browser_.
+[Note about Search Volumes](#commits)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[Deployment](#deployment)
 
-To log into the Heroku toolbelt CLI:
+[Credits](#credits)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<a name="UX"></a>
 
-------
+## User Experience (UX)
 
-## Release History
+-   ### User stories
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+    -   #### First Time Visitor Goals
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+        1. As a First Time Visitor, I want to easily understand the content of the webpage and the game rules. I also would like to make a fast decision if this website interesting for me enough.
+        2. As a First Time Visitor, I want to be able to easily navigate through the site and get an overal picture about the site structure.
+        3. As a First Time Visitor, I want to see their social media availability, where i can get more information about the site or organisation / person behind that.
+        4. As a first Time Visitor i want to find the possibility how to contact the person or organization behind the site. 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+    -   #### Returning Visitor Goals
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+        1. As a Returning Visitor, I want to see that the gam,e is dynamic. So the comparization pairs are not repeated or if they are repeated the result is not necessarily the same.
+        2. As a Returning Visitor, I want to see a contact form where i can ask questions or share my thoughts and comments.
+        3. As a Returning Visitor, I want to find community links.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+    -   #### Frequent User Goals
+        1. As a Frequent User, I want to see if there are more type of games or more versions of the existing one.
+        2. As a Frequent User, I want to sign up to a Newsletter so never miss any updates or news about the website and the topic.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+-   ### Design
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+    -   #### Colour Scheme
+        I tried to make the colour scheme as simple as possible to avoid disturbing color layouts. 
+        I have used 4 main colors:
+        - Light grey (Hex: #ab000d) <img src="./assets/img/readme/mp2_light_grey.JPG" height="20px" /> 
+        - Dark grey (Hex: #212121) <img src="./assets/img/readme/mp2_dark_grey" height="20px" />
+        - Orange (Hex: #ab000d) <img src="./assets/img/readme/mp2_orange.JPG" height="20px" /> 
+        - Red (Hex: #212121) <img src="./assets/img/readme/mp2_red.JPG" height="20px" />     
+        The color combination was selected on the Material Design website (https://material.io/). I tried to select color combination which is not disturbing and do not bother the visitor, so they stay longer on the site if they wish.
+        I also use basic warning or highlighter colors for their main usual meanings (red: not correct, green: correct, orange: selected etc ...) 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+    -   #### Typography
+        - There are two font families used on the site. Fredoka One and Montserrat. This font combination was selected on the googlefonts website (https://fonts.google.com/).
+        There are fallback font families in those cases when the main fonts cannot be loaded for some reason. Cursive is the fallback font in the case of Fredoka One and Sans Serif for Montserrat. Both font families are representing very well the style of the webpage. They seems playfull and happy.      
+        Fredoka One is used mainly for headings and titles or in the navigation menu, while Montserrat is used more in the texts and descriptions.
+    
+    -   #### Imagery
+        -   Since the main topic of this website is to focuse on images and comparing them i wanted to keep the surroundings without any picture. I wanted to keep it neutral for the visitor to keep a good focus on the images for comparisation.
