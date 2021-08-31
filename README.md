@@ -7,8 +7,8 @@
  
  ## About
 
-This website is a game website. The idea is comming from my 12years old son, who likes playing with the Higher or Lower game. This game  
-There are tons of workout programs and personal trainers on the net, but there are still people who are struggling how start to work on a better themself. Sometimes people over mistify what they have to do and do not think about the simpliest, fastest solution. This website has been created to show those people that they do not need much to start to live a healthier life, specially when comes to the training. They do not need expensive gym subscription or personal trainers. They need just their Body. The goal of this website is to introduce the basic bodyweight exercises and answer some frequently asked questions. This website enjoyable on every device, so it is easy to acces in all circumstances.
+This website is a game website. The idea is comming from my 12years old son, who likes playing with the Higher or Lower game.   
+
  
 
 
