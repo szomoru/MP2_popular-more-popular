@@ -109,13 +109,11 @@ header {
 #lp-footer {
     margin: 1rem;
     padding: 1.5rem;
+    color: #424242;
 }
 
-#lp-footer p {
-    font-family: 'Montserrat', sans-serif;
-    color: #e0e0e0;
-    font-size: 0.5rem;
-    text-align: center;
+#lp-footer i {
+    color: #424242;
 }
 
 #lp-title .nav-title {
@@ -282,9 +280,9 @@ header {
 .layer-left {
     position: absolute;
     top: 0;
+    bottom: 1.4rem;
     left: 0;
     width: 100%;
-    height: 100%;
     background: transparent;
     z-index: 2;
 }
@@ -292,9 +290,9 @@ header {
 .layer-right {
     position: absolute;
     top: 0;
+    bottom: 1.4rem;
     left: 0;
     width: 100%;
-    height: 100%;
     background-color: transparent;
     z-index: 2;
 }
@@ -302,9 +300,9 @@ header {
 .layer-correct {
     position: absolute;
     top: 0;
+    bottom: 1.4rem;
     left: 0;
     width: 100%;
-    height: 100%;
     background-color: rgb(56, 142, 60, .5);
     z-index: 100;
 }
@@ -312,9 +310,9 @@ header {
 .layer-wrong {
     position: absolute;
     top: 0;
+    bottom: 1.4rem;
     left: 0;
     width: 100%;
-    height: 100%;
     background-color: rgb(229, 57, 53, .5);
     z-index: 100;
 }
@@ -344,7 +342,7 @@ header {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     opacity: 0.9;
 }
@@ -366,6 +364,19 @@ img {
 .btn {
     max-width: 50%;
     max-height: 50%;
+}
+
+.info-panel-mi {
+    display: inline;
+}
+
+.info-panel-wiki {
+    display: inline;
+}
+
+.info-panel-mi,
+.info-panel-wiki {
+    height: 1rem;
 }
 
 /* ---------- Comparisation section sub styling - END ---------- */
@@ -402,7 +413,6 @@ img {
     color: #424242;
     width: 200px;
     min-width: fit-content;
-    display: inline;
 }
 
 .score-panel-paragraph-question p,
@@ -670,7 +680,12 @@ i {
     .comp-title h3 {
         display: none;
     }
-    .info-panel p {
+
+    .info-panel-name,
+    .info-panel-prof,
+    .info-panel-dob,
+    .info-panel-pob,
+    .info-panel-mi {
         display: none;
     }
 }

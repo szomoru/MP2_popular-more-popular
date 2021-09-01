@@ -65,11 +65,11 @@ function shuffleArray() {
 function createQuestionCard(user) {
    /* --- This function fetching the object values into the HTML content of the comp-section  ---*/
    return `
-         <p><strong>Name: </strong><span id="name" name_id="${user.name}">${user.name}</span></p>
-         <p><strong>Profession: </strong>${user.profession}</p>
-         <p><strong>Date of birth: </strong>${user.dateOfBirth}</p>
-         <p><strong>Place of birth: </strong>${user.placeOfBirth}</p>
-         <p><strong>More info: </strong><a href="${user.info}"  target="_blank">Wikipedia</a></p>`
+         <p class="info-panel-name"><strong>Name: </strong><span id="name" name_id="${user.name}">${user.name}</span></p>
+         <p class="info-panel-prof"><strong>Profession: </strong>${user.profession}</p>
+         <p class="info-panel-dob"><strong>Date of birth: </strong>${user.dateOfBirth}</p>
+         <p class="info-panel-pob"><strong>Place of birth: </strong>${user.placeOfBirth}</p>
+         <p class="info-panel-mi"><strong>More info:</p> <p class="info-panel-wiki"></strong><a href="${user.info}"  target="_blank">Wikipedia</a></p>`
 
 }
 
