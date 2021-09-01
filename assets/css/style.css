@@ -198,7 +198,6 @@ header {
 
 .about-text {
     margin: 2rem 4rem;
-    text-align: center;
     font-weight: 600;
 }
 
@@ -208,7 +207,7 @@ header {
 }
 
 .aboutGameList {
-    text-align: rigth;
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     list-style-type: none;
 }
@@ -392,15 +391,28 @@ img {
     font-weight: 800;
 }
 
-.score-panel p {
+.score-panel-paragraph-question,
+.score-panel-paragraph-correct,
+.score-panel-paragraph-wrong {
     font-size: 1rem;
-    padding: .5rem 2rem;
     margin: 10px;
+    padding: .5rem 2rem;
     border-radius: 1.5rem;
     background-color: #e0e0e0;
     color: #424242;
     width: 200px;
     min-width: fit-content;
+    display: inline;
+}
+
+.score-panel-paragraph-question p,
+.score-panel-paragraph-correct p,
+.score-panel-paragraph-wrong p {
+    margin: 0;
+}
+
+.score-text {
+    display: inline;
 }
 
 /* ----------------- MODALS STYLING - START ----------------*/
@@ -608,6 +620,49 @@ i {
     .comp-item-2 {
         width: 50%;
         height: auto;
+    }
+
+    .score-text{
+        display: none;
+    }
+
+    .score-panel-paragraph-question {
+        font-size: 1.5rem;
+        margin: 10px;
+        padding: .5rem;
+        border: solid 5px #424242;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        color: #424242;
+        width: 3rem; 
+        height: 3rem;
+        line-height: 1.5rem;
+    }
+    
+    .score-panel-paragraph-correct{
+        font-size: 1.5rem;
+        margin: 10px;
+        padding: .5rem;
+        border: solid 5px #388e3c;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        color: #424242;
+        width: 3rem; 
+        height: 3rem;
+        line-height: 1.5rem;
+    }
+
+    .score-panel-paragraph-wrong {
+        font-size: 1.5rem;
+        margin: 10px;
+        padding: .5rem;
+        border: solid 5px #d32f2f;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+        color: #424242;
+        width: 3rem; 
+        height: 3rem;
+        line-height: 1.5rem;
     }
 }
 

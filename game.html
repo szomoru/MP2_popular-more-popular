@@ -69,9 +69,15 @@
 
     <div class="score-section">
       <div class="score-panel">
-        <p>Question: <span id="questionNumber">0</span>/10</p>
-        <p class="correctAnswer">Correct Answer(s): <span id="correctAnswer">0</span></p>
-        <p class="wrongAnswer">Wrong Answer(s): <span id="wrongAnswer">0</span></p>
+        <div class="score-panel-paragraph-question">
+          <p class="score-text">Question:</p> <span id="questionNumber"><strong>0</strong></span><p class="score-text">/10</p>
+        </div>
+        <div class="score-panel-paragraph-correct">
+          <p class="score-text">Correct Answer(s):</p> <span id="correctAnswerNr" class="correctAnswer"><strong>0</strong></span>
+        </div>
+        <div class="score-panel-paragraph-wrong">
+          <p class="score-text">Wrong Answer(s):</p> <span id="wrongAnswerNr" class="wrongAnswer"><strong>0</strong></span>
+        </div>
       </div>
      </div>
 
@@ -81,7 +87,7 @@
         <i class="fas fa-smile fa-3x correctAnswer"></i>
         <br>
         <h1 class="correctAnswer">CONGRATULATIONS!</h1>
-        <h1>You had more or equal <span class="correctAnswer">GOOD</span> answers than <span class="wrongAnswer">WRONG</span></h1>
+        <h1>You had more or the same amount of <span class="correctAnswer">GOOD</span> answers than <span class="wrongAnswer">WRONG</span></h1>
         <br>
         <p>Correct Answer(s): <span class="correctAnswer" id="modalCorrectAnswerWinner">0</span></p>
         <p>Wrong Answer(s): <span class="wrongAnswer" id="modalWrongAnswerWinner">0</span></p>

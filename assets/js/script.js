@@ -5,6 +5,7 @@ let winnerName, userAnswer;
 
 document.addEventListener("DOMContentLoaded", function () {
    /* --- check if everything is loaded and listen if the Start New Game button is clicked ---*/
+   newGame();
    document.getElementById("startBtn").addEventListener("click", newGame);
 })
 
@@ -26,8 +27,8 @@ function addSearchVolume() {
 function newGame() {
    /* --- This function is the main function and executed when the user clicks on the Start New Game button ---*/
    document.getElementById("questionNumber").innerText = 0;
-   document.getElementById("correctAnswer").innerText = 0;
-   document.getElementById("wrongAnswer").innerText = 0;
+   document.getElementById("correctAnswerNr").innerText = 0;
+   document.getElementById("wrongAnswerNr").innerText = 0;
    fillSearchVolumeArray();
    addSearchVolume(); /* --- calling addSearchVolume function ---*/
    shuffleArray(); /* --- calling shuffleArray function ---*/
@@ -160,26 +161,26 @@ function incrementNrOfQuestion() {
 
 function incrementScoreCorrect() {
    /* --- When this function is called it fetches the old CORRECT answer score value and increase it by 1 ---*/
-   let oldScoreCorrect = parseInt(document.getElementById("correctAnswer").innerText);
+   let oldScoreCorrect = parseInt(document.getElementById("correctAnswerNr").innerText);
    console.log(oldScoreCorrect);
-   document.getElementById("correctAnswer").innerText = ++oldScoreCorrect;
+   document.getElementById("correctAnswerNr").innerText = ++oldScoreCorrect;
 }
 
 function incrementScoreWrong() {
    /* --- When this function is called it fetches the old WRONG answer score value and increase it by 1 ---*/
-   let oldScoreWrong = parseInt(document.getElementById("wrongAnswer").innerText);
+   let oldScoreWrong = parseInt(document.getElementById("wrongAnswerNr").innerText);
    console.log(oldScoreWrong);
-   document.getElementById("wrongAnswer").innerText = ++oldScoreWrong;
+   document.getElementById("wrongAnswerNr").innerText = ++oldScoreWrong;
 }
 
 function endGame() {
-   if (document.getElementById("correctAnswer").innerText >= document.getElementById("wrongAnswer").innerText) {
+   if (document.getElementById("correctAnswerNr").innerText >= document.getElementById("wrongAnswerNr").innerText) {
       let modal = document.getElementById("modalWinner");
       modal.style.display = "block";
-      let finalCorrectAnswer = document.getElementById("correctAnswer").innerText;
+      let finalCorrectAnswer = document.getElementById("correctAnswerNr").innerText;
       console.log(finalCorrectAnswer);
       document.getElementById("modalCorrectAnswerWinner").innerText = finalCorrectAnswer;
-      let finalWrongAnswer = parseInt(document.getElementById("wrongAnswer").innerText);
+      let finalWrongAnswer = parseInt(document.getElementById("wrongAnswerNr").innerText);
       console.log(finalWrongAnswer);
       document.getElementById("modalWrongAnswerWinner").innerText = finalWrongAnswer;
       document.getElementById("modalCloseWinner").addEventListener("click", function(){
@@ -189,10 +190,10 @@ function endGame() {
    } else {
       let modal = document.getElementById("modalLoser");
       modal.style.display = "block";
-      let finalCorrectAnswer = document.getElementById("correctAnswer").innerText;
+      let finalCorrectAnswer = document.getElementById("correctAnswerNr").innerText;
       console.log(finalCorrectAnswer);
       document.getElementById("modalCorrectAnswerLoser").innerText = finalCorrectAnswer;
-      let finalWrongAnswer = parseInt(document.getElementById("wrongAnswer").innerText);
+      let finalWrongAnswer = parseInt(document.getElementById("wrongAnswerNr").innerText);
       console.log(finalWrongAnswer);
       document.getElementById("modalWrongAnswerLoser").innerText = finalWrongAnswer;
       document.getElementById("modalCloseLoser").addEventListener("click", function(){
