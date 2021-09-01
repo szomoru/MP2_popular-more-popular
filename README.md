@@ -1,7 +1,7 @@
 <h1 align="center">Popular More Popular</h1>
-<h1 align="center"><img src="./assets/img/readme/responsive.JPG" /></h1>
+<h1 align="center"><img src="./assets/img/readme/responsive.PNG" /></h1>
 
-:point_right: <a href="#">Live Website</a> :point_left:
+:point_right: <a href="https://szomoru.github.io/MP2_popular-more-popular/">Live Website</a> :point_left:
 
 :point_right: <a href="https://github.com/szomoru/MP2_popular-more-popular">Github Repository</a> :point_left:
  
@@ -211,7 +211,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
 
     -   index.html                PASSED    [Result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fszomoru.github.io%2FMP2_popular-more-popular%2Findex.html)
-    -   about.html                 PASSED    [Result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fszomoru.github.io%2FMP2_popular-more-popular%2Findexabout.html)
+    -   about.html                 PASSED    [Result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fszomoru.github.io%2FMP2_popular-more-popular%2Fabout.html)
     -   game.html             PASSED    [Result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fszomoru.github.io%2FMP2_popular-more-popular%2Fgame.html)
     -   contact.html            2 WARNINGS    [Result](https://validator.w3.org/nu/?doc=https%3A%2F%2Fszomoru.github.io%2FMP2_popular-more-popular%2Fcontact.html)
     
