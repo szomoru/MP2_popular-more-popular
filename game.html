@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fontawsome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Popular More Popular | Game Page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fontawsome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Popular More Popular | Game Page</title>
 </head>
+
 <body>
 
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <p>Popular More Popular</p>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link grow" href="about.html">About the Game</a>
-        <a class="nav-item nav-link active grow" href="game.html">Game</a>
-        <a class="nav-item nav-link grow" href="contact.html">Contact</a>
-      </div>
-    </div>
-  </nav>
-</header>
-
-
-<section>
-  <div class="game-section main-section">
-    <div class="comp-title">   
-      <h3>Who was More Popular in the last 30 days?</h3>
-      <button id="startBtn" data-type="newGame" class="btn-start btn--big grow">Start New Game</button>
-    </div>
-
-    <div class="comp-section">
-      <div id="comp-section-left" class="comp-item-1">
-        <div id="layerL" class="layer-left" onclick="userAnswerLeft()" ></div>
-        <img id="compImgLeft" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
-        <div id="infoSectLeft" class="info-panel">
-          <p class="name"><strong>Name: </strong></p>
-          <p><strong>Profession: </strong></p>
-          <p><strong>Date of birth: </strong></p>
-          <p><strong>Place of birth: </strong></p>
-          <p><strong>More info: </strong></p>
-        </div>
-       </div>
-
-      <div id="comp-section-right" class="comp-item-2">
-        <div id="layerR" class="layer-right"  onclick="userAnswerRight()"></div>
-        <img id="compImgRight" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png" alt="unknown">
-        <div id="infoSectRight" class="info-panel">
-          <p class="info-panel-name"><strong>Name: </strong></p>
-          <p class="info-panel-prof"><strong>Profession: </strong></p>
-          <p class="info-panel-dob"><strong>Date of birth: </strong></p>
-          <p class="info-panel-pob"><strong>Place of birth: </strong></p>
-          <p class="info-panel-mi"></p><p class="info-panel-wiki"><strong>More info: </strong></p>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <p>Popular More Popular</p>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link grow" href="about.html">About the Game</a>
+          <a class="nav-item nav-link active grow" href="game.html">Game</a>
+          <a class="nav-item nav-link grow" href="contact.html">Contact</a>
         </div>
       </div>
+    </nav>
+  </header>
 
-    </div>
-
-    <div class="score-section">
-      <div class="score-panel">
-        <div class="score-panel-paragraph-question">
-          <p class="score-text">Question:</p> <span id="questionNumber"><strong>0</strong></span><p class="score-text">/10</p>
+  <section>
+    <div class="game-section main-section">
+      <div class="comp-title">
+        <h3>Who was More Popular in the last 30 days?</h3>
+        <button id="startBtn" data-type="newGame" class="btn-start btn--big grow">Start New Game</button>
+      </div>
+      <div class="comp-section">
+        <div id="comp-section-left" class="comp-item-1">
+          <div id="layerL" class="layer-left" onclick="userAnswerLeft()"></div>
+          <img id="compImgLeft" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png"
+            alt="unknown">
+          <div id="infoSectLeft" class="info-panel">
+            <p class="name"><strong>Name: </strong></p>
+            <p><strong>Profession: </strong></p>
+            <p><strong>Date of birth: </strong></p>
+            <p><strong>Place of birth: </strong></p>
+            <p><strong>More info: </strong></p>
+          </div>
         </div>
-        <div class="score-panel-paragraph-correct">
-          <p class="score-text">Correct Answer(s):</p> <span id="correctAnswerNr" class="correctAnswer"><strong>0</strong></span>
-        </div>
-        <div class="score-panel-paragraph-wrong">
-          <p class="score-text">Wrong Answer(s):</p> <span id="wrongAnswerNr" class="wrongAnswer"><strong>0</strong></span>
+        <div id="comp-section-right" class="comp-item-2">
+          <div id="layerR" class="layer-right" onclick="userAnswerRight()"></div>
+          <img id="compImgRight" class="comp-image" src="./assets/img/people/unknownperson_640x640_tiny.png"
+            alt="unknown">
+          <div id="infoSectRight" class="info-panel">
+            <p class="info-panel-name"><strong>Name: </strong></p>
+            <p class="info-panel-prof"><strong>Profession: </strong></p>
+            <p class="info-panel-dob"><strong>Date of birth: </strong></p>
+            <p class="info-panel-pob"><strong>Place of birth: </strong></p>
+            <p class="info-panel-mi"></p>
+            <p class="info-panel-wiki"><strong>More info: </strong></p>
+          </div>
         </div>
       </div>
-     </div>
-
-    <div id="modalWinner" class="modal">
-      <div class="modal-content">
-        <br>
-        <i class="fas fa-smile fa-3x correctAnswer"></i>
-        <br>
-        <h1 class="correctAnswer">CONGRATULATIONS!</h1>
-        <h1>You had more or the same amount of <span class="correctAnswer">GOOD</span> answers than <span class="wrongAnswer">WRONG</span></h1>
-        <br>
-        <p>Correct Answer(s): <span class="correctAnswer" id="modalCorrectAnswerWinner">0</span></p>
-        <p>Wrong Answer(s): <span class="wrongAnswer" id="modalWrongAnswerWinner">0</span></p>
-        <span id="modalCloseWinner" class="close">Back to game</span>
+      <div class="score-section">
+        <div class="score-panel">
+          <div class="score-panel-paragraph-question">
+            <p class="score-text">Question:</p> <span id="questionNumber"><strong>0</strong></span>
+            <p class="score-text">/10</p>
+          </div>
+          <div class="score-panel-paragraph-correct">
+            <p class="score-text">Correct Answer(s):</p> <span id="correctAnswerNr"
+              class="correctAnswer"><strong>0</strong></span>
+          </div>
+          <div class="score-panel-paragraph-wrong">
+            <p class="score-text">Wrong Answer(s):</p> <span id="wrongAnswerNr"
+              class="wrongAnswer"><strong>0</strong></span>
+          </div>
+        </div>
+      </div>
+      <div id="modalWinner" class="modal">
+        <div class="modal-content">
+          <br>
+          <i class="fas fa-smile fa-3x correctAnswer"></i>
+          <br>
+          <h1 class="correctAnswer">CONGRATULATIONS!</h1>
+          <h1>You had more or the same amount of <span class="correctAnswer">GOOD</span> answers than <span
+              class="wrongAnswer">WRONG</span></h1>
+          <br>
+          <p>Correct Answer(s): <span class="correctAnswer" id="modalCorrectAnswerWinner">0</span></p>
+          <p>Wrong Answer(s): <span class="wrongAnswer" id="modalWrongAnswerWinner">0</span></p>
+          <span id="modalCloseWinner" class="close">Back to game</span>
+        </div>
+      </div>
+      <div id="modalLoser" class="modal">
+        <div class="modal-content">
+          <br>
+          <i class="fas fa-frown fa-3x wrongAnswer"></i>
+          <br>
+          <h1 class="wrongAnswer">Ahhhh ...!</h1>
+          <h1>You had more <span class="wrongAnswer">WRONG</span> answers than <span class="correctAnswer">GOOD</span>!
+            Maybe next time ...</h1>
+          <br>
+          <p>Correct Answer(s): <span class="correctAnswer" id="modalCorrectAnswerLoser">0</span></p>
+          <p>Wrong Answer(s): <span class="wrongAnswer" id="modalWrongAnswerLoser">0</span></p>
+          <span id="modalCloseLoser" class="close">Back to game</span>
+        </div>
       </div>
     </div>
-  
+  </section>
 
-    <div id="modalLoser" class="modal">
-      <div class="modal-content">
-        <br>
-        <i class="fas fa-frown fa-3x wrongAnswer"></i> 
-        <br>
-        <h1 class="wrongAnswer">Ahhhh ...!</h1>  
-        <h1>You had more <span class="wrongAnswer">WRONG</span> answers than <span class="correctAnswer">GOOD</span>! Maybe next time ...</h1>
-        <br>
-        <p>Correct Answer(s): <span class="correctAnswer" id="modalCorrectAnswerLoser">0</span></p>
-        <p>Wrong Answer(s): <span class="wrongAnswer" id="modalWrongAnswerLoser">0</span></p>
-        <span id="modalCloseLoser" class="close">Back to game</span>
-      </div>
-    </div>
-  </div>
-        
-        
-        <!--<div class="trend-section">
-         EMBEDDED SCRIPT From google trend website
-          <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2674_RC03/embed_loader.js"></script> 
-          <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Albert Einstein","geo":"","time":"today 1-m"},{"keyword":"Robert Redford","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=Albert%20Einstein,Robert%20Redford","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
-        </div> -->
-        
-        
-</section>
+  <footer id="lp-footer" class="main-section vertical-align-center horizontal-align-center">
+    <h6>Copyright 2021 <i class="far fa-copyright"></i></h6>
+  </footer>
 
-    
-
-<footer id="lp-footer" class="main-section vertical-align-center horizontal-align-center">
-  <h6>Copyright 2021 <i class="far fa-copyright"></i></h6>
-</footer>
-    
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="./assets/js/script.js"></script>
-<script src="./assets/js/database.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/database.js"></script>
 
 </body>
+
 </html>
