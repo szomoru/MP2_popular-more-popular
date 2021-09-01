@@ -164,7 +164,7 @@ The pairs are created randomly in each game. The dynamic of the game is given th
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [JavaScript] (https://en.wikipedia.org/wiki/JavaScript)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries & Programs Used
 
@@ -173,7 +173,7 @@ The pairs are created randomly in each game. The dynamic of the game is given th
 1. [Hover.css:](https://ianlunn.github.io/Hover/)
     - Hover.css was used on the Social Media icons in the footer and on all cards and menu items to highlight and scale while being hovered over them.
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Fredoka' and 'Montserrat' fonts into the style.css file which is used on all pages throughout the project.
+    - Google fonts were used to import the 'Fredoka One' and 'Montserrat' fonts into the style.css file which is used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
@@ -258,11 +258,128 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge browsers.
 -   The website was viewed on a variety of devices such as Desktop, Laptop, iPhoneSE, iPhone 6 & iPhone 11 Pro.
 -   A large amount of testing was done to ensure that all pages were linking correctly.
--   Family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+-   Family members were asked to review the site and playing the game and documentation to point out any bugs and/or user experience issues.
 
 ### Functional Testing
 -   During the development process and after that there were several tests carried out to validate the links. All external and internal links were tested several times.
 
 ### Known Bugs
+At this point there are no known bugs but during the development process in the testing periods some bug has been detected. They were the following: 
+-   on the game page the wikipedia link was unclickable. The highlighter layer overlayed the link. By trying to click on the link the game detected as a selection. This bug has been solved by decreasing the height of the overlaying highlighter layer.
+-   By clicking on the wikipedia link on the info panel the link has been opened in a separate window as it should be. But parallel to this the game also detected as a selection, so the game changed to the next round. With this bug the player has lost the possibility to get extra information during the game. 
+-   On the contact page after filling out and submitting the contact form the input content stayed the same. There was no feedback for the visitor if the submit button click was succesfull or not. This bug has been solved by emptying the input fields after clicking on the submit button and sending the message. 
 
--   On some mobile devices the Landing page text box not shrinking enough.
+
+<a name="searchvolumes"></a>
+
+## Note about Search volumes
+
+
+
+## Deployment
+
+### GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/szomoru/MP2_popular-more-popular)
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+    - <img src="./assets/img/readme/deploy_github_settings.JPG" height="25px" />
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+    - <img src="./assets/img/readme/deploy_github_pages.JPG" height="50px" />
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+    - <img src="./assets/img/readme/deploy_github_pages_master.JPG" height="50px" />
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/szomoru/MP2_popular-more-popular)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+    - <img src="./assets/img/readme/deploy_fork.JPG" height="50px" />
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/szomoru/MP2_popular-more-popular)
+2. Next to the green Gitpod button, click on the "Code" button.
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+    - <img src="./assets/img/readme/deploy_clone.JPG" height="50px" />
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+7. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+## Credits
+
+### Code
+
+-   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+
+-   [W3Schools](https://www.w3schools.com/): I have used their content many times to understand CSS and HTML, JavaScript and learned a lot from their content
+
+-   [Froggy](https://flexboxfroggy.com/): I have used this cute educator site to understand better the flexbox method
+
+-   [CSS tricks](https://css-tricks.com/): I have also learned a lot and found interesting topics on the CSS-tricks website
+
+-   [Stackoverflow community](https://stackoverflow.com/): I have read a lot of forums and got a lot of hints how to continue when i was stucked.
+
+### Content
+
+-   All content was written by the developer -Gergely Vig. 
+- I have used the following documents as a support and inspiration for the README.md file:
+    - Code Institute [SampleREADME](https://github.com/Code-Institute-Solutions/SampleREADME)
+    - Code Institute [README Template](https://github.com/Code-Institute-Solutions/readme-template)
+    - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code)
+    - [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+    - [Gergely Vig](https://github.com/szomoru/MP1-Bodyweight)
+    
+
+### Media
+
+-   All used images have been taken from wikipedia page:
+    - [Albert Einstein](https://en.wikipedia.org/wiki/Albert_Einstein),
+    - [Robert Redford](https://en.wikipedia.org/wiki/Robert_Redford),
+    - [Bruce Springsteen](https://en.wikipedia.org/wiki/Bruce_Springsteen),
+    - [Ernest Hemingway](https://en.wikipedia.org/wiki/Ernest_Hemingway),
+    - [Stephen Hawking](https://en.wikipedia.org/wiki/Stephen_Hawking),
+    - [Freddy Mercury](https://en.wikipedia.org/wiki/Freddie_Mercury),
+    - [Jack Lemmon](https://en.wikipedia.org/wiki/Jack_Lemmon),
+    - [Walter Matthau](https://en.wikipedia.org/wiki/Walter_Matthau),
+    - [Babe Ruth](https://en.wikipedia.org/wiki/Babe_Ruth),
+    - [Marie Curie](https://en.wikipedia.org/wiki/Marie_Curie),
+    - [Julia Roberts](https://en.wikipedia.org/wiki/Julia_Roberts),
+    - [Amelia Earhart](https://en.wikipedia.org/wiki/Amelia_Earhart),
+    - [Madonna Louise Ciccone](https://en.wikipedia.org/wiki/Madonna),
+    - [Marilyn Monroe](https://en.wikipedia.org/wiki/Marilyn_Monroe),
+    - [Steffi Graf](https://en.wikipedia.org/wiki/Steffi_Graf),
+    - [Barbra Streisand](https://en.wikipedia.org/wiki/Barbra_Streisand),
+    - [Cher](https://en.wikipedia.org/wiki/Cher),
+    - [Whoopi Goldberg](https://en.wikipedia.org/wiki/Whoopi_Goldberg),
+    - [Mata Hari](https://en.wikipedia.org/wiki/Mata_Hari)
+
+- There is only one exception is [Muhammad Ali](https://www.biography.com/athlete/muhammad-ali)
+
+
+### Acknowledgements
+
+-   My Mentor for helpful feedback.
+-   Special thanks to everyone who has supported me during making my milestone project, but especially to my wife and sons for their constructive feedbacks and the time they spent with testing the game.
