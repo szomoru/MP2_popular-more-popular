@@ -39,7 +39,15 @@ header {
     justify-content: center;
 }
 
-/* ----- LANDING PAGE Format -----*/
+.correctAnswer {
+    color: #388e3c;
+}
+
+.wrongAnswer {
+    color: #d32f2f;
+}
+
+/* ----- LANDING PAGE STYLING - START -----*/
 
 .lp-navigation-menu {
     display: flex;
@@ -70,7 +78,7 @@ header {
 }
 
 .lp-text h2 {
-    color: #ffffff;
+    color: #e0e0e0;
     letter-spacing: 0.2rem;
     line-height: 2rem;
     margin-bottom: 1.5rem;
@@ -110,13 +118,6 @@ header {
     text-align: center;
 }
 
-/* ----- HEADER Format -----*/
-
-.row {
-    margin: 0;
-    flex-wrap: nowrap;
-}
-
 #lp-title .nav-title {
     text-decoration: none;
     color: #f57f17;
@@ -128,7 +129,92 @@ header {
     box-shadow: 5px 5px #ffb04c;
 }
 
-/* ---- GAME SECTION ----- */
+/* ----- LANDING PAGE STYLING - END -----*/
+
+/* ---------- NAVBAR STYLING - START ---------- */
+
+.navbar {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px #6d6d6d;
+    background-color: #e0e0e0;
+    width: 100%;
+}
+
+.navbar p {
+    padding: 0.8rem;
+    margin: 0 1rem 0 0;
+    border: solid 3px #f57f17;
+    border-radius: 10px;
+    box-shadow: 5px 5px #ffb04c;
+    font-family: 'Fredoka One', cursive;
+    color: #f57f17;
+    font-size: 1.2rem;
+}
+
+.navbar-toggler {
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.nav-item {
+    margin: 0 1rem 0 0;
+}
+
+.active {
+    color: #f57f17 !important;
+}
+
+/* ---------- NAVBAR STYLING - END ---------- */
+
+/* ----------------  ABOUT HTML STYLING - START ---------------*/
+
+.ms-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-steps {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    margin: 2rem;
+}
+
+.grow-card {
+    transition: all .5s ease-in-out;
+}
+
+.about-text {
+    margin: 2rem 4rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.about-text a {
+    text-decoration: none;
+    color: #f57f17;
+}
+
+.aboutGameList {
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ----------------  ABOUT HTML STYLING - END ---------------*/
+
+/* ---- SECTIONS MAIN STYLING ----- */
 
 .main-section {
     margin: 0;
@@ -145,8 +231,6 @@ header {
     flex-direction: column;
 }
 
-/* ---------- Comparisation section ---------- */
-
 .comp-section {
     display: flex;
     flex-direction: row;
@@ -158,6 +242,8 @@ header {
     height: auto;
     border-radius: 10px;
 }
+
+/* ---------- Comparisation section sub styling - START ---------- */
 
 .comp-item-1,
 .comp-item-2 {
@@ -207,20 +293,6 @@ header {
     height: 100%;
     background-color: transparent;
     z-index: 2;
-}
-
-@keyframes layer-right {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: .5;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 .layer-correct {
@@ -283,56 +355,16 @@ img {
     padding: 0.2rem
 }
 
-.btn-img-container {
-    position: relative;
-    max-width: 100%;
-    height: auto;
-}
-
-.btn-container {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    bottom: 10px;
-    right: 10px;
-    padding: 1.2rem;
-    background-color: rgb(255, 255, 255, 0.75);
-    border-radius: .5rem;
-    max-height: 15%;
-    max-width: 20%;
-}
-
 .grow {
     transition: all .2s ease-in-out;
 }
 
-.blink {
-    -webkit-animation: blink 0.2s linear infinite;
-    -moz-animation: blink 0.2s linear infinite;
-    animation: blink 0.2s linear infinite;
-}
-
-.btn-container .btn {
+.btn {
     max-width: 50%;
     max-height: 50%;
 }
 
-
-.btn-img-container .btn-up {
-    color: #76d275;
-    background-color: #00701a;
-}
-
-.btn-img-container .btn-down {
-    color: #ff6f60;
-    background-color: #ab000d;
-}
-
-.btn-format {
-    font-size: 24px;
-    margin: 0.1rem;
-    border: none;
-}
+/* ---------- Comparisation section sub styling - END ---------- */
 
 /* ---------- Score Panel ---------- */
 
@@ -366,269 +398,7 @@ img {
     min-width: fit-content;
 }
 
-
-.correctAnswer {
-    color: #388e3c;
-}
-
-
-.wrongAnswer {
-    color: #d32f2f;
-}
-
-/* ---------- NAVBAR ---------- */
-
-.navbar {
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 5px 5px #6d6d6d;
-    background-color: #e0e0e0;
-    width: 100%;
-}
-
-.navbar p {
-    padding: 0.8rem;
-    margin: 0 1rem 0 0;
-    border: solid 3px #f57f17;
-    border-radius: 10px;
-    box-shadow: 5px 5px #ffb04c;
-    font-family: 'Fredoka One', cursive;
-    color: #f57f17;
-    font-size: 1.2rem;
-}
-
-.navbar-toggler {
-    border-radius: 5px;
-    background-color: #ffffff;
-}
-
-.navbar-nav .nav-link {
-    text-align: left;
-    font-size: 1.5rem;
-}
-
-.nav-item {
-    margin: 0 1rem 0 0;
-}
-
-.active {
-    color: #f57f17 !important;
-}
-
-/* ----- HOVER -----*/
-
-/* hover style on the social network icons*/
-.social-networks i:hover {
-    color: #ab000d;
-    transform: scale(1.2);
-    transition: all 0.25s ease-in-out;
-}
-
-#contact_form .btn:hover {
-    transform: scale(1.2);
-    transition: all 0.25s ease-in-out;
-    background-color: #ab000d;
-}
-
-.lp-text a:hover {
-    background-color: #ffb04c;
-    color: #424242;
-    border: solid 3px #424242;
-    box-shadow: 5px 5px #bc5100;
-}
-
-.navbar-nav:hover {
-    color: #f57f17;
-}
-
-.grow:hover {
-    transform: scale(1.02);
-}
-
-.grow-card:hover {
-    transform: scale(1.2);
-}
-
-.layer-left:hover {
-    background-color: rgb(255, 176, 76, .3);
-    z-index: 2;
-}
-
-.layer-right:hover {
-    background-color: rgb(255, 176, 76, .3);
-    z-index: 2;
-}
-
-.close:hover,
-.close:focus {
-    color: #bc5100;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-/* ---------- Contact Form ----------*/
-
-.center-form {
-    margin: 0;
-    padding: 50px;
-    text-align: right;
-}
-
-.center-form h1,
-i {
-    color: #f57f17;
-}
-
-
-.btn-form {
-    margin-top: 2rem;
-}
-
-.contact-section {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.main-section h3 {
-    margin: 2rem;
-    color: #ab000d;
-
-}
-
-#contact_form {
-    font-family: 'Montserrat', sans-serif;
-}
-
-#contact_form .btn {
-    background-color: #f57f17;
-    color: #e0e0e0;
-    font-weight: 600;
-}
-
-#contact_form div {
-    margin-bottom: 1rem;
-}
-
-.form-control {
-    margin-bottom: 1.5rem;
-    border: 2px solid #f57f17;
-    background-color: #e0e0e0;
-}
-
-/* Social network styling - START */
-
-.social-network-container {
-    display: flex;
-    height: 100%;
-    justify-content: right;
-    align-items: center;
-    padding: 0;
-}
-
-.social-networks {
-    width: 100%;
-}
-
-.social-networks li {
-    display: inline;
-}
-
-.social-networks i {
-    font-size: 200%;
-    margin: 0.5%;
-    padding: 1%;
-    color: #f57f17;
-}
-
-/* Social network styling - END */
-
-
-/* ---------- MEDIA QUERIES ----------*/
-
-@media screen and (max-width: 1004px) {
-    .navigation-menu {
-        flex-direction: column;
-    }
-
-}
-
-@media screen and (max-width: 376px) {
-
-    .navbar p {
-        display: none;
-    }
-
-    .comp-item-1 {
-        width: 50%;
-        height: auto;
-    }
-
-    .comp-item-2 {
-        width: 50%;
-        height: auto;
-    }
-}
-
-
-/*@media screen and (min-width: 641px) {
-    #navbar-hamburger {
-        display: none;
-    };
-}*/
-
-@media screen and (max-width: 812px) {
-    .comp-title h3 {
-        display: none;
-    }
-    .info-panel p {
-        display: none;
-    }
-}
-
-/* ----------------  ABOUT ---------------*/
-
-.ms-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about-steps {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.card {
-    margin: 2rem;
-}
-
-.grow-card {
-    transition: all .5s ease-in-out;
-}
-
-.about-text {
-    margin: 2rem 4rem;
-    text-align: center;
-    font-weight: 600;
-}
-
-.about-text a {
-    text-decoration: none;
-    color: #f57f17;
-}
-
-.aboutGameList {
-    text-align: justify;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* ----------------- MODAL ----------------*/
+/* ----------------- MODALS STYLING - START ----------------*/
 
 /* The Modal (background) */
 .modal {
@@ -679,3 +449,170 @@ i {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+/* ----------------- MODALS STYLING - END ----------------*/
+
+/* ---------- Contact Form ----------*/
+
+.center-form {
+    margin: 0;
+    padding: 50px;
+    text-align: right;
+}
+
+.center-form h1,
+i {
+    color: #f57f17;
+}
+
+
+.btn-form {
+    margin-top: 2rem;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-section h3 {
+    margin: 2rem;
+    color: #ab000d;
+}
+
+#contact_form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contact_form .btn {
+    background-color: #f57f17;
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+#contact_form div {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    margin-bottom: 1.5rem;
+    border: 2px solid #f57f17;
+    background-color: #e0e0e0;
+}
+
+/* Social network styling - START */
+
+.social-network-container {
+    display: flex;
+    height: 100%;
+    justify-content: right;
+    align-items: center;
+    padding: 0;
+}
+
+.social-networks {
+    width: 100%;
+}
+
+.social-networks li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 200%;
+    margin: 0.5%;
+    padding: 1%;
+    color: #f57f17;
+}
+
+/* Social network styling - END */
+
+/* ----- HOVER STYLING - START -----*/
+
+.social-networks i:hover {
+    color: #ab000d;
+    transform: scale(1.2);
+    transition: all 0.25s ease-in-out;
+}
+
+#contact_form .btn:hover {
+    transform: scale(1.2);
+    transition: all 0.25s ease-in-out;
+    background-color: #ab000d;
+}
+
+.lp-text a:hover {
+    background-color: #ffb04c;
+    color: #424242;
+    border: solid 3px #424242;
+    box-shadow: 5px 5px #bc5100;
+}
+
+.navbar-nav:hover {
+    color: #f57f17;
+}
+
+.grow:hover {
+    transform: scale(1.02);
+}
+
+.grow-card:hover {
+    transform: scale(1.2);
+}
+
+.layer-left:hover {
+    background-color: rgb(255, 176, 76, .3);
+    z-index: 2;
+}
+
+.layer-right:hover {
+    background-color: rgb(255, 176, 76, .3);
+    z-index: 2;
+}
+
+.close:hover,
+.close:focus {
+    color: #bc5100;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ----- HOVER STYLING - END -----*/
+
+/* ---------- MEDIA QUERIES - START ----------*/
+
+@media screen and (max-width: 1004px) {
+    .navigation-menu {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 376px) {
+
+    .navbar p {
+        display: none;
+    }
+
+    .comp-item-1 {
+        width: 50%;
+        height: auto;
+    }
+
+    .comp-item-2 {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .comp-title h3 {
+        display: none;
+    }
+    .info-panel p {
+        display: none;
+    }
+}
+
+/* ---------- MEDIA QUERIES - END ----------*/
