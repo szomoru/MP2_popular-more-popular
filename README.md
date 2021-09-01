@@ -91,6 +91,8 @@ The pairs are created randomly in each game. The dynamic of the game is given th
 
         <img src="./assets/img/readme/wireframe_desktop_mp2.PNG" height="400px" />
 
+    <a name="features"></a>        
+
     ## Features
 
     ### Present Features
@@ -188,6 +190,20 @@ The pairs are created randomly in each game. The dynamic of the game is given th
     - To beautify my codes i have used the Bootstrap inbuilt beautify feature and Format Document feature.
 
 
+<a name="scripts"></a>
+
+## JavaScript
+
+- ### database.js:
+    this javascript file contains the database array. This array has 20 elements and each element has 6 object keys at this moment. 
+- ### script.js:
+    this javascript file contains all the functions which is running the game and updating the DOM
+- ### sendEmail.js:
+    this file contains only one function, which is sending the contact form information to the emailJS email service. 
+
+
+<a name="testing"></a>
+
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
@@ -273,8 +289,10 @@ At this point there are no known bugs but during the development process in the 
 <a name="searchvolumes"></a>
 
 ## Note about Search volumes
+- The original plan was that the game using live search volume data through DataForSEO API. Since google has changed its analytics policies and usage couple of years ago, the best possibilities today to use a third party API from companies. Unfortunately these APIs are not free, so getting search volume data cost a lot of money depending on how many times we fetch data. 
+Unfortunately i did not have the possibility to fill up a balance, so to keep the game dynamic i have decided to use fictional search volume data. Every time when a player starts a new game a random number generator fills up the search volume object in the database array. The random number generator generates a number between 0 and 1000000.  
 
-
+<a name="deployment"></a>
 
 ## Deployment
 
@@ -327,6 +345,8 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+<a name="credits"></a>
 
 ## Credits
 
