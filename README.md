@@ -285,14 +285,14 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 At this point there are no known bugs but during the development process in the testing periods some bug has been detected. They were the following: 
 -   on the game page the wikipedia link was unclickable. The highlighter layer overlayed the link. By trying to click on the link the game detected as a selection. This bug has been solved by decreasing the height of the overlaying highlighter layer.
 -   By clicking on the wikipedia link on the info panel the link has been opened in a separate window as it should be. But parallel to this the game also detected as a selection, so the game changed to the next round. With this bug the player has lost the possibility to get extra information during the game. 
--   On the contact page after filling out and submitting the contact form the input content stayed the same. There was no feedback for the visitor if the submit button click was succesfull or not. This bug has been solved by emptying the input fields after clicking on the submit button and sending the message. 
+-   On the contact page after filling out and submitting the contact form the input content stayed the same. There was no feedback for the visitor if the submit button click was succesfull or not. This bug has been solved by clearing the input fields after clicking on the submit button and sending the message. 
 
 
 <a name="searchvolumes"></a>
 
 ## Note about Search volumes
 - The original plan was that the game using live search volume data through DataForSEO API. Since google has changed its analytics policies and usage couple of years ago, the best possibilities today to use a third party API from companies. Unfortunately these APIs are not free, so getting search volume data cost a lot of money depending on how many times we fetch data. 
-Unfortunately i did not have the possibility to fill up a balance, so to keep the game dynamic i have decided to use fictional search volume data. Every time when a player starts a new game a random number generator fills up the search volume object in the database array. The random number generator generates a number between 0 and 1000000.  
+Unfortunately i did not have the possibility to fill up a balance, so to keep the game dynamic i have decided to use fictional search volume data. Every time when the player starts a new game a random number generator fills up the search volume object in the database array. The random number generator generates a number between 0 and 1000000.  
 
 <a name="deployment"></a>
 
@@ -398,7 +398,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
     - [Whoopi Goldberg](https://en.wikipedia.org/wiki/Whoopi_Goldberg),
     - [Mata Hari](https://en.wikipedia.org/wiki/Mata_Hari)
 
-- There is only one exception is [Muhammad Ali](https://www.biography.com/athlete/muhammad-ali)
+- There is only one exception [Muhammad Ali](https://www.biography.com/athlete/muhammad-ali)
 
 
 ### Acknowledgements
