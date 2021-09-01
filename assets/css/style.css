@@ -181,8 +181,8 @@ header {
 .about-steps {
     display: flex;
     flex-wrap: wrap;
-    flex-direction:row;
-    justify-content:center;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
@@ -216,7 +216,7 @@ header {
 
 /* ----------------  ABOUT HTML STYLING - END ---------------*/
 
-/* ---- SECTIONS MAIN STYLING ----- */
+/* ---- MAIN SECTIONS STYLING - START ----- */
 
 .main-section {
     margin: 0;
@@ -245,6 +245,8 @@ header {
     border-radius: 10px;
 }
 
+/* ---- MAIN SECTIONS STYLING - END ----- */
+
 /* ---------- Comparisation section sub styling - START ---------- */
 
 .comp-item-1,
@@ -260,7 +262,6 @@ header {
 
 .comp-item-1 {
     border-left: solid 5px transparent;
-
 }
 
 .comp-item-2 {
@@ -277,6 +278,7 @@ header {
     padding: 1.5rem;
 }
 
+/* ----- Overlay layers - Start -----*/
 .layer-left {
     position: absolute;
     top: 0;
@@ -316,6 +318,7 @@ header {
     background-color: rgb(229, 57, 53, .5);
     z-index: 100;
 }
+/* ----- Overlay layers - End -----*/
 
 .btn-start {
     width: fit-content;
@@ -381,7 +384,7 @@ img {
 
 /* ---------- Comparisation section sub styling - END ---------- */
 
-/* ---------- Score Panel ---------- */
+/* ---------- SCORE PANEL STYLING - START ---------- */
 
 .score-section {
     margin-top: 1.5rem;
@@ -424,6 +427,8 @@ img {
 .score-text {
     display: inline;
 }
+
+/* ---------- SCORE PANEL STYLING - END ---------- */
 
 /* ----------------- MODALS STYLING - START ----------------*/
 
@@ -479,7 +484,7 @@ img {
 
 /* ----------------- MODALS STYLING - END ----------------*/
 
-/* ---------- Contact Form ----------*/
+/* ---------- Contact Form styling - START ----------*/
 
 .center-form {
     margin: 0;
@@ -491,7 +496,6 @@ img {
 i {
     color: #f57f17;
 }
-
 
 .btn-form {
     margin-top: 2rem;
@@ -529,7 +533,9 @@ i {
     background-color: #e0e0e0;
 }
 
-/* Social network styling - START */
+/* ---------- Contact Form styling - END ----------*/
+
+/* ---------- Social network styling - START ----------*/
 
 .social-network-container {
     display: flex;
@@ -554,7 +560,7 @@ i {
     color: #f57f17;
 }
 
-/* Social network styling - END */
+/* ---------- Social network styling - END ----------*/
 
 /* ----- HOVER STYLING - START -----*/
 
@@ -611,6 +617,7 @@ i {
 /* ---------- MEDIA QUERIES - START ----------*/
 
 @media screen and (max-width: 1004px) {
+
     .navigation-menu {
         flex-direction: column;
     }
@@ -632,7 +639,7 @@ i {
         height: auto;
     }
 
-    .score-text{
+    .score-text {
         display: none;
     }
 
@@ -644,12 +651,12 @@ i {
         border-radius: 50%;
         background-color: #e0e0e0;
         color: #424242;
-        width: 3rem; 
+        width: 3rem;
         height: 3rem;
         line-height: 1.5rem;
     }
-    
-    .score-panel-paragraph-correct{
+
+    .score-panel-paragraph-correct {
         font-size: 1.5rem;
         margin: 10px;
         padding: .5rem;
@@ -657,7 +664,7 @@ i {
         border-radius: 50%;
         background-color: #e0e0e0;
         color: #424242;
-        width: 3rem; 
+        width: 3rem;
         height: 3rem;
         line-height: 1.5rem;
     }
@@ -670,13 +677,14 @@ i {
         border-radius: 50%;
         background-color: #e0e0e0;
         color: #424242;
-        width: 3rem; 
+        width: 3rem;
         height: 3rem;
         line-height: 1.5rem;
     }
 }
 
 @media screen and (max-width: 812px) {
+    
     .comp-title h3 {
         display: none;
     }
