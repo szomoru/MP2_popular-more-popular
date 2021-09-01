@@ -22,7 +22,7 @@ The pairs are created randomly in each game. The dynamic of the game is given th
 
 [Testing](#testing)
 
-[Note about Search Volumes](#commits)
+[Note about Search Volumes](#searchvolumes)
 
 [Deployment](#deployment)
 
